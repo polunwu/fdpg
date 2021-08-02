@@ -13,6 +13,7 @@ export default function ({ route, redirect }) {
   }
 }
 function isAuth() {
+  console.log(localStorage.getItem('fdpg_auth'))
   // Check if user session exists somehow
-  return false
+  return localStorage.getItem('fdpg_auth')
 }

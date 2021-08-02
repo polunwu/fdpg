@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="ar-character.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>20210707_13_ar</title>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <!-- This is to load the A-frame extras, that contain the required components that are used to show the animations -->
+    <!-- of the 3D model of the robot -->
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>   
+    <!-- merge-images -->
+    <script src="https://unpkg.com/merge-images"></script>
+
+    <script src="ar/gesture-detector.js"></script>
+    <script src="ar/gesture-handler.js"></script>
+  </head>
+
+  <body>
+    <!-- Loader -->
+    <div id="loader">Loading...</div>
+
+    <!-- A-frame -->
+    <!-- SEE: https://github.com/fcor/arjs-gestures/blob/master/index.html -->
+    <a-scene
+      arjs
+      embedded
+      renderer="logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+      gesture-detector
+      id="scene"
+    >
+      <a-assets>
+        <a-asset-item
+          id="box"
+          src="ar/model/untitled/Untitled.gltf"
+        >
+        </a-asset-item>
+        <a-asset-item
+          id="water"
+          src="ar/model/water/water.gltf"
+        >
+        </a-asset-item>
+        <a-asset-item
+          id="robot"
+          src="ar/model/robot/BrainStem.glb"
+        >
+        </a-asset-item>
+      </a-assets>
+
+      <a-marker
+        preset="custom"
+        type="pattern" 
+        url="ar/pattern/pattern-marker-2.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+      >
+        <!-- The animation-mixer is the A-frame component to control the animation of the 3D model. Since we are not specifiying any animation -->
+        <!-- name, it just loops all the animations of the model  -->
+        <a-entity
+          id="bowser-model"
+          animation-mixer
+          gltf-model=""
+          position="0 0 0"
+          scale="1 1 1"
+          class="clickable"
+          gesture-handler
+        >
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+
+    <!-- UI -->
+    <div id="snap-btn">
+      <img class="icon" src="ar/images/photo.png" alt="take photo">
+    </div>
+
+    <!-- <div id="snap-frame">
+      <img class="result" src="" alt="">
+    </div> -->
+    <script src="ar-character.js"></script>
+  </body>
+</html>

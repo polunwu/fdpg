@@ -1,0 +1,61 @@
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+#loader {
+  color: white;
+  font-size: 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  #loader.hide {
+    display: none; }
+
+#snap-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  position: fixed;
+  left: 50%;
+  bottom: 10%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer; }
+  #snap-btn .icon {
+    width: 60%; }
+
+#snap-frame {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50vw;
+  height: 66.67vw;
+  padding: 20px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  #snap-frame .result {
+    width: 100%; }

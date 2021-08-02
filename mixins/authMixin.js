@@ -1,11 +1,11 @@
 export default {
   created() {
-    if (this.$route.name === 'login' && isAuth()) {
-      this.$router.push('/')
-    }
-    if (!isAuth()) {
-      this.$router.push('/login')
-    }
+    // if (this.$route.name === 'login' && isAuth()) {
+    //   this.$router.push('/')
+    // }
+    // if (!isAuth()) {
+    //   this.$router.push('/login')
+    // }
   },
 }
 

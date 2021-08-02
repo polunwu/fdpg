@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h1>public</h1>
-    <h2>h2</h2>
+    <h1>default</h1>
+    <div>
+      <nuxt-link to="/"> home </nuxt-link>
+      <nuxt-link to="/login"> login </nuxt-link>
+    </div>
     <Nuxt />
   </div>
 </template>

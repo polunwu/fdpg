@@ -3,7 +3,8 @@
 </template>
 
 <script>
+import authMixin from '@/mixins/authMixin'
 export default {
-  layout: 'private',
+  mixins: [authMixin],
 }
 </script>

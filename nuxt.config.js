@@ -2,6 +2,9 @@ export default {
   ssr: false,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  router: {
+    base: '/fdpg/',
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

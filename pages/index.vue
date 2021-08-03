@@ -1,7 +1,15 @@
 <template>
-  <div>Home Dashboard</div>
+  <div>Home Dashboard {{ fdid }}</div>
 </template>
 
 <script>
-export default {}
+import { getUser } from '@/utils/user'
+export default {
+  data() {
+    const fdid = getUser() ? getUser().fdid : ''
+    return {
+      fdid: fdid,
+    }
+  },
+}
 </script>

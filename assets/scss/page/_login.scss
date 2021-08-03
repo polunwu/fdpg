@@ -93,5 +93,14 @@
       right: 13.5px;
       top: 10px;
     }
+    &__error {
+      position: absolute;
+      top: 56px;
+      text-align: center;
+      width: 100%;
+      color: $danger;
+      font-weight: 500;
+      line-height: 1.375;
+    }
   }
 }

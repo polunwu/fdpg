@@ -343,11 +343,13 @@
       <div ref="loginInputGroup" class="login__input-group">
         <input
           ref="loginInput"
+          v-model="fdid"
           class="login__input"
           type="text"
           placeholder="輸入 Fourdeisre ID"
         />
-        <button class="login__submit"></button>
+        <button v-if="fdid" @click="onSubmit" class="login__submit"></button>
+        <div v-if="error" class="login__error">{{ error }}</div>
       </div>
     </div>
   </div>
@@ -355,14 +357,34 @@
 
 <script>
 import revealLogin from '@/timelines/revealLogin'
+import { setUser } from '@/utils/user'
 export default {
   data() {
-    return {}
+    return {
+      fdid: '',
+      error: '',
+    }
   },
   mounted() {
     const { bg, logoLoader, loginLogo, loginInputGroup, loginInput } =
       this.$refs
     revealLogin(bg, logoLoader, loginLogo, loginInputGroup, loginInput)
+  },
+  methods: {
+    async onSubmit() {
+      try {
+        const resp = await this.$axios.$post(
+          'https://j9dh3ne194.execute-api.ap-northeast-2.amazonaws.com/fdpg2021/authorize',
+          {
+            fdid: this.fdid,
+          }
+        )
+        setUser(JSON.stringify(resp))
+        this.$router.push('/')
+      } catch (error) {
+        this.error = '很抱歉，您並非入選玩家'
+      }
+    },
   },
 }
 </script>

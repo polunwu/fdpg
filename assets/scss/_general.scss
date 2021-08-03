@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  touch-action: manipulation; // prevent Double-tap
+  font-size: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Segoe UI',
+    'Noto Sans TC', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial,
+    'Source Han Sans TC', sans-serif;
+}

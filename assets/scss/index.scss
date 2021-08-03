@@ -1,5 +1,4 @@
 @import './variables';
+@import './general';
 
-h2 {
-  font-size: 100px;
-}
+@import './page/login';

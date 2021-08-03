@@ -1,3 +1,5 @@
+import { getUser } from '@/utils/user'
+
 export default function ({ route, redirect }) {
   console.log('middleware: auth')
   if (route.name === 'login') {
@@ -13,7 +15,7 @@ export default function ({ route, redirect }) {
   }
 }
 function isAuth() {
-  console.log(localStorage.getItem('fdpg_auth'))
+  console.log(getUser())
   // Check if user session exists somehow
-  return localStorage.getItem('fdpg_auth')
+  return getUser()
 }

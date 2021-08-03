@@ -1,0 +1,97 @@
+#page-login {
+  width: 100%;
+  height: 100%;
+  position: fixed; // prevent iOS safari scroll bounce
+  overflow: hidden;
+  background: $white;
+
+  // 藍色背景
+  .bg {
+    position: absolute;
+    inset: 0;
+    background-color: $primary;
+    transform-origin: 0% 50%;
+    transform: scaleX(0%);
+  }
+
+  // 網格背景 + 球
+  .space-grid {
+    position: absolute;
+    height: 96vh;
+    width: auto;
+    top: 2vh;
+    left: 0;
+
+    .ball {
+      opacity: 0;
+    }
+  }
+
+  // 載入標誌
+  .logo-loader {
+    position: absolute;
+    width: 63vw;
+    max-width: 245px;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  .login {
+    position: absolute;
+    width: 67vw;
+    max-width: 261px;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    &__logo {
+      opacity: 0;
+      margin-left: 28px;
+      margin-bottom: 29px;
+    }
+
+    &__input-group {
+      position: relative;
+    }
+    &__input {
+      width: 100%;
+      height: 48px;
+      border-radius: 24px;
+      background: $primary;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $light-gray;
+      outline: 0;
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+      padding: 12.6px 40px 13.4px 20.8px;
+
+      color: $white;
+
+      &::placeholder {
+        color: $white;
+        opacity: 0.33;
+      }
+    }
+    &__submit {
+      width: 27px;
+      height: 27px;
+      border-style: solid;
+      border: none;
+      background-color: $primary;
+      padding: 5px;
+      background-image: url('~/assets/images/icons/arrow-right.svg');
+      background-position: 50%;
+      background-size: 17px;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 13.5px;
+      top: 10px;
+    }
+  }
+}

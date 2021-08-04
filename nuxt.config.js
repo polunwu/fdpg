@@ -4,13 +4,14 @@ export default {
   target: 'static',
   router: {
     base: '/fdpg/',
+    middleware: 'auth',
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'fdpg',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'zh-Hant-TW',
     },
     meta: [
       { charset: 'utf-8' },

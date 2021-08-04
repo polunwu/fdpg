@@ -333,6 +333,12 @@
       src="~/assets/images/login/logo_loader.svg"
       alt="logo_loader"
     />
+    <img
+      ref="playerLoader"
+      class="player-loader"
+      src="~/assets/images/login/player_loader@2x.png"
+      alt="player_loader"
+    />
     <div class="login">
       <img
         ref="loginLogo"

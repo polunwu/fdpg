@@ -39,6 +39,16 @@
     opacity: 0;
   }
 
+  .player-loader {
+    position: absolute;
+    width: 207px;
+    height: 206px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
   // 登入區塊
   .login {
     position: absolute;

@@ -1,17 +1,18 @@
 import gsap from 'gsap'
 
-export default function revealLogin(
+export default function revealLogin({
   bg,
   logoLoader,
   loginLogo,
   loginInputGroup,
-  loginInput
-) {
+  loginInput,
+}) {
   gsap
     .timeline({
       delay: 1,
       onComplete: function () {
-        loginInput.focus()
+        loginInput.focus() // focus input
+        logoLoader.remove() // 移除載入 logo
       },
     })
     .fromTo(

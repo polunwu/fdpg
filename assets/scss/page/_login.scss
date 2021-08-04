@@ -39,6 +39,7 @@
     opacity: 0;
   }
 
+  // 登入區塊
   .login {
     position: absolute;
     width: 67vw;
@@ -92,6 +93,10 @@
       position: absolute;
       right: 13.5px;
       top: 10px;
+
+      &:disabled {
+        opacity: 0.3;
+      }
     }
     &__error {
       position: absolute;
@@ -102,5 +107,71 @@
       font-weight: 500;
       line-height: 1.375;
     }
+  }
+
+  // 審核中區塊
+  .verify {
+    position: absolute;
+    inset: 0;
+    background-color: rgba($color: $primary, $alpha: 0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__block {
+      position: relative;
+      width: 220px;
+      height: 185px;
+      z-index: 2;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 19px;
+      background-color: rgba($color: $white, $alpha: 0.9);
+      box-shadow: 0px 6px 19px 4px rgb(255 255 255 / 60%);
+    }
+    &__loader {
+      position: absolute;
+      top: 40px;
+      width: 69px;
+      height: 69px;
+      transform-origin: center;
+      animation: rotate 2.5s ease infinite;
+    }
+    &__success {
+      position: absolute;
+      top: 37px;
+      width: 74px;
+      height: 74px;
+
+      opacity: 0;
+      transform-origin: center;
+      transform: scale(0);
+    }
+    &__msg {
+      position: absolute;
+      bottom: 23px;
+      margin: 0;
+      color: $dark-gray;
+      font-weight: 500;
+    }
+    &__success-bg {
+      z-index: 0;
+      position: absolute;
+      left: 100%;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

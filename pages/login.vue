@@ -348,8 +348,36 @@
           type="text"
           placeholder="輸入 Fourdeisre ID"
         />
-        <button v-if="fdid" @click="onSubmit" class="login__submit"></button>
+        <button
+          v-if="fdid"
+          @click="onSubmit"
+          :disabled="disableSubmit"
+          class="login__submit"
+        ></button>
         <div v-if="error" class="login__error">{{ error }}</div>
+      </div>
+    </div>
+    <div v-show="verifying" class="verify">
+      <img
+        ref="successBg"
+        class="verify__success-bg"
+        src="~/assets/images/login/success_bg@2x.png"
+        alt="success_bg"
+      />
+      <div class="verify__block">
+        <img
+          ref="verifyLoader"
+          class="verify__loader"
+          src="~/assets/images/login/verify_loader.svg"
+          alt="verify_loader"
+        />
+        <img
+          ref="verifySuccess"
+          class="verify__success"
+          src="~/assets/images/login/verify_success.svg"
+          alt="verify_success"
+        />
+        <p class="verify__msg">{{ verifyMsg }}</p>
       </div>
     </div>
   </div>
@@ -357,21 +385,25 @@
 
 <script>
 import revealLogin from '@/timelines/revealLogin'
+import showVerifySuccess from '@/timelines/showVerifySuccess'
 import { setUser } from '@/utils/user'
+
 export default {
   data() {
     return {
       fdid: '',
       error: '',
+      disableSubmit: false,
+      verifying: false,
+      verifyMsg: '玩家身分審核中 ...',
     }
   },
   mounted() {
-    const { bg, logoLoader, loginLogo, loginInputGroup, loginInput } =
-      this.$refs
-    revealLogin(bg, logoLoader, loginLogo, loginInputGroup, loginInput)
+    revealLogin(this.$refs)
   },
   methods: {
     async onSubmit() {
+      this.disableSubmit = true
       try {
         const resp = await this.$axios.$post(
           'https://j9dh3ne194.execute-api.ap-northeast-2.amazonaws.com/fdpg2021/authorize',
@@ -379,10 +411,22 @@ export default {
             fdid: this.fdid,
           }
         )
-        setUser(JSON.stringify(resp))
-        this.$router.push('/')
+        this.verifying = true
+
+        setTimeout(() => {
+          showVerifySuccess(this.$refs) // 驗證成功動畫
+          setTimeout(() => {
+            this.verifyMsg = '審核成功！'
+          }, 800)
+        }, 1000)
+        setTimeout(() => {
+          setUser(JSON.stringify(resp)) // 儲存
+          this.$router.push('/') // 跳轉
+        }, 3000)
       } catch (error) {
+        this.verifying = false
         this.error = '很抱歉，您並非入選玩家'
+        this.disableSubmit = false
       }
     },
   },

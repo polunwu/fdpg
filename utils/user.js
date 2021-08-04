@@ -9,3 +9,7 @@ export function setUser(user) {
 export function clearUser() {
   localStorage.removeItem(KEY_NAME)
 }
+
+export function charAcquired() {
+  return localStorage.getItem('u3fm32k6rul3nk4')
+}

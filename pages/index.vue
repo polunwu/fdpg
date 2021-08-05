@@ -53,32 +53,42 @@
         <span class="gate-time"></span>
       </div>
       <div class="gate-wrapper">
-        <a class="gate gather">
+        <a @click="toGather" class="gate gather">
           <span class="gate__name">廣場</span>
           <img
             class="gate__bg"
             src="@/assets/images/home/gate_2@2x.png"
             alt="gate_1"
           />
-          <div class="gate__block">
+          <div v-show="!gather.leftTime.isUp" class="gate__block">
             <img src="@/assets/images/icons/lock.svg" alt="lock" />
           </div>
         </a>
-        <span v-show="isGatherLocked" class="gate-time">10天 22:10:00</span>
+        <span
+          v-show="!gather.leftTime.isUp && gather.timerReady"
+          class="gate-time"
+          >{{ gather.leftTime.dd }}天 {{ gather.leftTime.hh }}:{{
+            gather.leftTime.mm
+          }}:{{ gather.leftTime.ss }}</span
+        >
       </div>
       <div class="gate-wrapper">
-        <a class="gate meet">
+        <a @click="toMeet" class="gate meet">
           <span class="gate__name">大廳</span>
           <img
             class="gate__bg"
             src="@/assets/images/home/gate_3@2x.png"
             alt="gate_1"
           />
-          <div class="gate__block">
+          <div v-show="!meet.leftTime.isUp" class="gate__block">
             <img src="@/assets/images/icons/lock.svg" alt="lock" />
           </div>
         </a>
-        <span v-show="isMeetLocked" class="gate-time">10天 22:10:00</span>
+        <span v-show="!meet.leftTime.isUp && meet.timerReady" class="gate-time"
+          >{{ meet.leftTime.dd }}天 {{ meet.leftTime.hh }}:{{
+            meet.leftTime.mm
+          }}:{{ meet.leftTime.ss }}</span
+        >
       </div>
     </div>
   </div>
@@ -86,6 +96,7 @@
 
 <script>
 import { getUser, charAcquired } from '@/utils/user'
+import { countDown } from '@/utils/countDown'
 export default {
   layout: 'dashboard',
   data() {
@@ -96,9 +107,65 @@ export default {
       fdid: fdid,
       isAcquired: isAcquired, // 是否已取得角色
       characterNum: characterNum, // 角色編號
-      isGatherLocked: true,
-      isMeetLocked: true,
+      gather: {
+        timerReady: false,
+        timerID: null,
+        leftTime: {
+          isUp: false,
+          dd: 0,
+          hh: 0,
+          mm: 0,
+          ss: 0,
+        },
+      },
+      meet: {
+        timerReady: false,
+        timerID: null,
+        leftTime: {
+          isUp: false,
+          dd: 0,
+          hh: 0,
+          mm: 0,
+          ss: 0,
+        },
+      },
     }
+  },
+  created() {
+    // 計數器，計算剩餘時間
+    const gatherCounter = countDown('2021/09/04 16:20:00')
+    const meetCounter = countDown('2021/09/04 12:00:00')
+    // 每秒呼叫一次剩餘時間
+    this.gather.timerID = setInterval(() => {
+      this.gather.leftTime = gatherCounter()
+    }, 1000)
+    this.meet.timerID = setInterval(() => {
+      this.meet.leftTime = meetCounter()
+    }, 1000)
+    // Timer Ready 後才顯示，避免數字從 0 閃一下
+    setTimeout(() => {
+      this.gather.timerReady = true
+      this.meet.timerReady = true
+    }, 1000)
+  },
+  beforeDestroy() {
+    // 清理
+    clearInterval(this.gather.timerID)
+    clearInterval(this.meet.timerID)
+  },
+  methods: {
+    toMeet() {
+      // 跳轉 google meet
+      if (this.meet.leftTime.isUp) {
+        window.open('https://www.google.com/', '_blank')
+      }
+    },
+    toGather() {
+      // 跳轉 gather
+      if (this.meet.leftTime.isUp) {
+        window.open('https://www.google.com/', '_blank')
+      }
+    },
   },
 }
 </script>

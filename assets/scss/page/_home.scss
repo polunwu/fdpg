@@ -20,6 +20,7 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    // fdid
     &__fdid {
       position: absolute;
       bottom: -33px;
@@ -35,6 +36,7 @@
       color: $primary;
     }
 
+    // 提示訊息
     &__msg {
       position: absolute;
       z-index: 10;
@@ -45,6 +47,94 @@
 
       a {
         color: $primary;
+      }
+    }
+
+    // 角色圖
+    // &__char {
+    // }
+
+    // 結果
+    &__result {
+      position: absolute;
+
+      .result-block {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 77px;
+        box-shadow: 0 3px 6px rgba($color: $primary, $alpha: 0.2);
+        border-radius: 13px;
+        overflow: hidden;
+
+        .name {
+          color: $white;
+          line-height: 20px;
+          font-size: 14px;
+          padding: 6px 10px;
+        }
+        .value {
+          color: $dark-gray;
+          background-color: $white;
+          line-height: 19px;
+          font-weight: 600;
+          padding: 5px 10px 7px 10px;
+        }
+      }
+
+      // 計畫狂
+      &.plan {
+        top: 15px;
+        left: -7px;
+
+        .result-img {
+          margin-bottom: -11px;
+          margin-left: 3px;
+        }
+        .name {
+          background-color: #5383d9;
+        }
+      }
+
+      // 行動力
+      &.move {
+        top: -6px;
+        right: -7px;
+
+        .result-img {
+          margin-bottom: -20px;
+        }
+        .name {
+          background-color: #ac6eb3;
+        }
+      }
+
+      // 理財力
+      &.money {
+        bottom: 9px;
+        left: -7px;
+
+        .result-img {
+          margin-left: -12px;
+          margin-bottom: -28px;
+        }
+        .name {
+          background-color: #f5b329;
+        }
+      }
+
+      // 愛生活
+      &.life {
+        bottom: 9px;
+        right: -7px;
+
+        .result-img {
+          margin-left: -3px;
+          margin-bottom: -20px;
+        }
+        .name {
+          background-color: #ff7a87;
+        }
       }
     }
   }

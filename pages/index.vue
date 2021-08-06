@@ -134,7 +134,7 @@ export default {
   created() {
     // 計數器，計算剩餘時間
     const gatherCounter = countDownFrom('2021/09/04 16:20:00 UTC+8') // 指定台北時區
-    const meetCounter = countDownFrom('2021/08/06 11:55:00 UTC+8')
+    const meetCounter = countDownFrom('2021/09/04 11:55:00 UTC+8')
     // 每秒呼叫一次剩餘時間
     this.gather.timerID = setInterval(() => {
       this.gather.leftTime = gatherCounter()

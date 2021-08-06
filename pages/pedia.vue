@@ -1,5 +1,5 @@
 <template>
-  <div id="page-characters">Characters Pedia</div>
+  <div id="page-pedia">Characters Pedia</div>
 </template>
 
 <script>

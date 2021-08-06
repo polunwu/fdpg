@@ -1,6 +1,6 @@
 <template>
   <nav id="nav">
-    <NuxtLink to="/characters-pedia" class="char-link">
+    <NuxtLink to="/pedia" class="pedia-link">
       <img src="~/assets/images/icons/awesome-book.svg" alt="icon book" />
     </NuxtLink>
     <NuxtLink to="/" class="home-link">

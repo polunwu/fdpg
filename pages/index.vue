@@ -7,7 +7,7 @@
     />
     <div class="vip">
       <p v-if="!isAcquired" class="vip__msg">
-        <NuxtLink to="/characters-overview">前往 </NuxtLink>取得專屬角色
+        <NuxtLink to="/overview">前往 </NuxtLink>取得專屬角色
       </p>
       <img v-else class="vip__char" src="@/assets/images/home/char_1@2x.png" />
       <!-- 結果數值 -->
@@ -42,7 +42,7 @@
     <div class="gates">
       <div class="gate-wrapper">
         <span v-if="!isAcquired" class="gate-notification"></span>
-        <NuxtLink to="/characters-overview" class="gate char">
+        <NuxtLink to="/overview" class="gate char">
           <span class="gate__name">角色</span>
           <img
             class="gate__bg"

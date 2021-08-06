@@ -1,4 +1,19 @@
 #page-home {
+  //顯示角色總覽區塊
+  &.show-overview {
+    #home-section {
+      top: -100%;
+
+      .bg {
+        top: -15vh;
+      }
+    }
+    #overview-section {
+      top: 0;
+    }
+  }
+}
+#home-section {
   width: 100%;
   height: 100%;
   position: fixed; // prevent iOS safari scroll bounce
@@ -7,14 +22,18 @@
   overflow: hidden;
   background: $white;
 
+  transition: top $elevatorDuration $elevatorCurve;
+
   // 背景
   .bg {
-    position: absolute;
+    position: fixed;
     z-index: 0;
     height: 96vh;
     width: auto;
     top: 2vh;
     left: 0;
+
+    transition: top $elevatorDuration $elevatorCurve;
   }
 
   .vip {
@@ -55,8 +74,8 @@
       transform: translate(-50%, -50%);
       color: $primary;
 
-      a {
-        color: $primary;
+      span {
+        text-decoration: underline;
       }
     }
 

@@ -1,10 +1,5 @@
 <template>
   <div id="overview-section">
-    <img
-      class="bg"
-      src="@/assets/images/home/space_grid_bg.svg"
-      alt="space_grid_bg"
-    />
     <NuxtLink class="ar-intro-link" to="/ar-intro">解鎖專屬活動角色</NuxtLink>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide>

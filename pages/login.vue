@@ -414,7 +414,7 @@ export default {
         const resp = await this.$axios.$post(
           'https://j9dh3ne194.execute-api.ap-northeast-2.amazonaws.com/fdpg2021/authorize',
           {
-            fdid: this.fdid,
+            fdid: this.fdid.trim(),
           }
         )
         this.verifying = true

@@ -15,25 +15,25 @@
         keyName="plan"
         name="計畫狂"
         :isAcquired="isAcquired"
-        :value="90"
+        :value="social"
       />
       <ResultBlock
         keyName="move"
         name="行動力"
         :isAcquired="isAcquired"
-        :value="100"
+        :value="action"
       />
       <ResultBlock
         keyName="money"
         name="理財力"
         :isAcquired="isAcquired"
-        :value="80"
+        :value="money"
       />
       <ResultBlock
         keyName="life"
         name="愛生活"
         :isAcquired="isAcquired"
-        :value="70"
+        :value="love"
       />
       <div class="vip__fdid">
         {{ fdid.toUpperCase() }}
@@ -99,13 +99,32 @@ import { getUser, charAcquired } from '@/utils/user'
 import { countDownFrom } from '@/utils/countDownFrom'
 export default {
   data() {
-    const fdid = getUser() ? getUser().fdid : ''
-    const characterNum = getUser() ? getUser().character : -1
+    let user
+    let fdid = ''
+    let characterNum = -1
+    let action = 0
+    let love = 0
+    let money = 0
+    let social = 0
+    if (getUser()) {
+      user = getUser()
+      fdid = user.fdid
+      characterNum = user.character
+      action = user.properties.action
+      love = user.properties.love
+      money = user.properties.money
+      social = user.properties.social
+    }
     const isAcquired = charAcquired() ? true : false
+
     return {
       fdid: fdid,
       isAcquired: isAcquired, // 是否已取得角色
       characterNum: characterNum, // 角色編號
+      action: action,
+      love: love,
+      money: money,
+      social: social,
       gather: {
         timerReady: false,
         timerID: null,

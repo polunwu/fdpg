@@ -1,10 +1,5 @@
 <template>
   <div id="page-ar-intro">
-    <img
-      class="bg"
-      src="@/assets/images/home/space_grid_bg.svg"
-      alt="space_grid_bg"
-    />
     <nav id="ar-intro-nav">
       <a class="back-link" @click.prevent="$router.back()">
         <img src="@/assets/images/icons/slide-arrow-left.svg" alt="back" />
@@ -13,6 +8,13 @@
         <img src="@/assets/images/icons/home-white.svg" alt="home" />
       </NuxtLink>
     </nav>
+    <div ref="bg" class="bg"></div>
+    <img
+      ref="floatingBg"
+      class="floating-bg"
+      src="@/assets/images/ar-intro/floating_bg@2x.png"
+      alt="floating_bg"
+    />
     <swiper ref="introSwiper" class="swiper" :options="swiperOption">
       <swiper-slide>
         <img
@@ -58,6 +60,7 @@
 </template>
 
 <script>
+import randomFloating from '@/timelines/randomFloating'
 export default {
   data() {
     return {
@@ -71,6 +74,9 @@ export default {
         },
       },
     }
+  },
+  mounted() {
+    randomFloating(this.$refs)
   },
   computed: {
     swiper() {

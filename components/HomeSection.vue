@@ -99,32 +99,20 @@ import { getUser, charAcquired } from '@/utils/user'
 import { countDownFrom } from '@/utils/countDownFrom'
 export default {
   data() {
-    let user
-    let fdid = ''
-    let characterNum = -1
-    let action = 0
-    let love = 0
-    let money = 0
-    let social = 0
-    if (getUser()) {
-      user = getUser()
-      fdid = user.fdid
-      characterNum = user.character
-      action = user.properties.action
-      love = user.properties.love
-      money = user.properties.money
-      social = user.properties.social
-    }
-    const isAcquired = charAcquired() ? true : false
+    const {
+      fdid,
+      character,
+      properties: { action, love, money, social },
+    } = getUser()
 
     return {
-      fdid: fdid,
-      isAcquired: isAcquired, // 是否已取得角色
-      characterNum: characterNum, // 角色編號
-      action: action,
-      love: love,
-      money: money,
-      social: social,
+      fdid: fdid || '',
+      isAcquired: charAcquired() ? true : false, // 是否已取得角色
+      characterNum: character || -1, // 角色編號
+      action: parseInt(action) || 0,
+      love: parseInt(love) || 0,
+      money: parseInt(money) || 0,
+      social: parseInt(social) || 0,
       gather: {
         timerReady: false,
         timerID: null,

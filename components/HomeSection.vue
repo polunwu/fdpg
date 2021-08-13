@@ -15,7 +15,7 @@
         keyName="plan"
         name="計畫狂"
         :isAcquired="isAcquired"
-        :value="social"
+        :value="plan"
       />
       <ResultBlock
         keyName="move"
@@ -102,17 +102,17 @@ export default {
     const {
       fdid,
       character,
-      properties: { action, love, money, social },
+      properties: { action, love, money, plan },
     } = getUser()
 
     return {
       fdid: fdid || '',
       isAcquired: charAcquired() ? true : false, // 是否已取得角色
-      characterNum: character || -1, // 角色編號
+      character: character || '', // 角色編號
       action: parseInt(action) || 0,
       love: parseInt(love) || 0,
       money: parseInt(money) || 0,
-      social: parseInt(social) || 0,
+      plan: parseInt(plan) || 0,
       gather: {
         timerReady: false,
         timerID: null,

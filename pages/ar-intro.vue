@@ -19,7 +19,7 @@
       <swiper-slide>
         <img
           class="intro-graph"
-          src="@/assets/images/ar-intro/intro_1@2x.png"
+          src="@/assets/images/ar-intro/intro_1.gif"
           alt="intro_1"
         />
         <p class="describe">
@@ -30,7 +30,7 @@
       <swiper-slide>
         <img
           class="intro-graph"
-          src="@/assets/images/ar-intro/intro_2@2x.png"
+          src="@/assets/images/ar-intro/intro_2.gif"
           alt="intro_2"
         />
         <p class="describe">
@@ -41,7 +41,7 @@
       <swiper-slide>
         <img
           class="intro-graph"
-          src="@/assets/images/ar-intro/intro_3@2x.png"
+          src="@/assets/images/ar-intro/intro_3.gif"
           alt="intro_3"
         />
         <p class="describe">

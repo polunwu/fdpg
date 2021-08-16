@@ -258,14 +258,14 @@
     }
     // 廣場
     .gate.gather {
-      background-color: #ff7a87;
+      background-color: $primary;
       .gate__bg {
         right: 43px;
       }
     }
     // 大廳
     .gate.meet {
-      background-color: #63d085;
+      background-color: $primary;
       .gate__bg {
         right: 12px;
       }

@@ -10,6 +10,37 @@
 
   padding-top: 12vh;
 
+  // 返回上方鈕
+  .top-btn {
+    position: absolute;
+    z-index: 999;
+    left: 21px;
+    top: 93px;
+    cursor: pointer;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 24px;
+    background-color: $white;
+    box-shadow: 0 5px 8px rgba($color: $primary, $alpha: 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.35s ease;
+    transition-delay: 0;
+
+    &.show {
+      opacity: 1;
+      pointer-events: auto;
+      transition-delay: $elevatorDuration;
+    }
+  }
+
   // 解鎖專屬活動角色連結
   .ar-intro-link {
     position: absolute;
@@ -44,6 +75,7 @@
   }
   .swiper-button-prev,
   .swiper-button-next {
+    top: 60%;
     background-color: $primary;
     width: 60px;
     height: 60px;

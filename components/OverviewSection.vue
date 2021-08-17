@@ -1,6 +1,9 @@
 <template>
   <div id="overview-section">
     <NuxtLink class="ar-intro-link" to="/ar-intro">解鎖專屬活動角色</NuxtLink>
+    <div class="top-btn" :class="{ show: isOverview }" @click="handleUpClick">
+      <img src="@/assets/images/icons/arrow-up.svg" alt="arrow_up" />
+    </div>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide>
         <img
@@ -58,6 +61,16 @@ export default {
         },
       },
     }
+  },
+  computed: {
+    isOverview() {
+      return this.$store.state.isOverview
+    },
+  },
+  methods: {
+    handleUpClick() {
+      this.$store.commit('showHome')
+    },
   },
 }
 </script>

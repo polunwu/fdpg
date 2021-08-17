@@ -7,6 +7,7 @@
       <NuxtLink class="home-link" to="/" @click.native="handleHomeClick">
         <img src="@/assets/images/icons/home-white.svg" alt="home" />
       </NuxtLink>
+      <div class="spacer"></div>
     </nav>
     <div ref="bg" class="bg"></div>
     <img

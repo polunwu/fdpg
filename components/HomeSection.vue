@@ -5,40 +5,8 @@
       src="@/assets/images/home/space_grid_bg.svg"
       alt="space_grid_bg"
     />
-    <div class="vip">
-      <p v-if="!isAcquired" class="vip__msg">
-        <span @click="toOverview">前往 </span>取得專屬角色
-      </p>
-      <img v-else class="vip__char" src="@/assets/images/home/char_1@2x.png" />
-      <!-- 結果數值 -->
-      <ResultBlock
-        keyName="plan"
-        name="計畫狂"
-        :isAcquired="isAcquired"
-        :value="plan"
-      />
-      <ResultBlock
-        keyName="move"
-        name="行動力"
-        :isAcquired="isAcquired"
-        :value="action"
-      />
-      <ResultBlock
-        keyName="money"
-        name="理財力"
-        :isAcquired="isAcquired"
-        :value="money"
-      />
-      <ResultBlock
-        keyName="life"
-        name="愛生活"
-        :isAcquired="isAcquired"
-        :value="love"
-      />
-      <div class="vip__fdid">
-        {{ fdid.toUpperCase() }}
-      </div>
-    </div>
+    <div class="msg-wrapper"></div>
+    <div class="vip"></div>
     <div class="gates">
       <div class="gate-wrapper">
         <span v-if="!isAcquired" class="gate-notification"></span>

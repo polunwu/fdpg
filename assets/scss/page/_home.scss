@@ -21,13 +21,14 @@
   left: 0;
   overflow: hidden;
   background: $white;
+  padding-top: 90px;
 
   transition: top $elevatorDuration $elevatorCurve;
 
   // 背景
   .bg {
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     height: 96vh;
     width: auto;
     top: 2vh;
@@ -36,7 +37,27 @@
     transition: top $elevatorDuration $elevatorCurve;
   }
 
-  .vip {
+  .fdid {
+    padding: 6px 19px 8px 6px;
+    text-align: right;
+    color: #beced3;
+  }
+
+  .result {
+    width: 100%;
+    padding: 0px 12px 12px 12px;
+    position: relative;
+
+    &__img {
+      width: 100%;
+    }
+
+    &__again {
+      cursor: pointer;
+      position: absolute;
+      top: 111px;
+      right: 24px;
+    }
   }
 
   .gates {
@@ -65,15 +86,11 @@
 
       .gate-notification {
         position: absolute;
-        left: 17px;
-        top: -14px;
+        left: 32px;
+        top: -33px;
         z-index: 1;
-        border: 5px solid $white;
-        width: 18px;
-        height: 18px;
-        border-radius: 18px;
-        background-color: #ff6e50;
-        box-sizing: content-box;
+        width: 44px;
+        height: 44px;
       }
     }
 

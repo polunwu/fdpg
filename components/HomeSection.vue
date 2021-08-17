@@ -6,10 +6,16 @@
       alt="space_grid_bg"
     />
     <div class="msg-wrapper"></div>
-    <div class="vip"></div>
+    <div class="fdid">Fourdesire ID_{{ fdid.toUpperCase() }}</div>
+    <ResultBlock :character="character" :isAcquired="isAcquired" />
     <div class="gates">
       <div class="gate-wrapper">
-        <span v-if="!isAcquired" class="gate-notification"></span>
+        <img
+          v-if="!isAcquired"
+          class="gate-notification"
+          src="@/assets/images/icons/alert.svg"
+          alt="alert"
+        />
         <div @click="toOverview" class="gate char">
           <span class="gate__name">角色</span>
           <img
@@ -76,7 +82,7 @@ export default {
     return {
       fdid: fdid || '',
       isAcquired: charAcquired() ? true : false, // 是否已取得角色
-      character: character || '', // 角色編號
+      character: character || 'c0', // 角色編號
       action: parseInt(action) || 0,
       love: parseInt(love) || 0,
       money: parseInt(money) || 0,

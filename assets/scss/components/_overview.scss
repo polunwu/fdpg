@@ -103,4 +103,16 @@
     width: 89vw;
     max-width: 348px;
   }
+
+  // 高度小於 697px
+  @media screen and (max-height: 697px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 56%;
+    }
+    // silde 內容圖片
+    .slide-img {
+      max-width: 280px;
+    }
+  }
 }

@@ -37,14 +37,58 @@
     transition: top $elevatorDuration $elevatorCurve;
   }
 
+  // 提示訊息
+  .msg-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 318px;
+    margin: 0 auto;
+
+    .msg {
+      margin: 0 4.5px;
+      padding: 16px 16px;
+      border-radius: 19px;
+      height: 72px;
+      text-align: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: $light-blue;
+      color: $white;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .msg-half {
+      width: 160px;
+    }
+  }
+
+  // ID
   .fdid {
     padding: 6px 19px 8px 6px;
     text-align: right;
     color: #beced3;
+    font-size: 13px;
+    line-height: 18px;
   }
 
+  // 上線人數
+  .online {
+    font-size: 15px;
+    text-align: center;
+    color: $primary;
+  }
+
+  // 結果
   .result {
     width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
     padding: 0px 12px 12px 12px;
     position: relative;
 
@@ -55,8 +99,8 @@
     &__again {
       cursor: pointer;
       position: absolute;
-      top: 111px;
-      right: 24px;
+      top: 98px;
+      right: 25px;
     }
   }
 
@@ -163,6 +207,47 @@
       margin-top: 8px;
       font-size: 14px;
       color: $dark-gray;
+    }
+  }
+
+  // 高度小於 697px
+  @media screen and (max-height: 697px) {
+    // 提示訊息
+    .msg-wrapper {
+      position: absolute;
+      z-index: 10;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 318px;
+
+      .msg {
+        background: rgba($color: $light-blue, $alpha: 0.9);
+      }
+    }
+
+    // 上線人數
+    .online {
+      display: none;
+    }
+
+    .gates {
+      .gate-wrapper {
+        .gate {
+          height: calc(100vh - 90px - 32px - 93vw - 11px);
+        }
+      }
+    }
+  }
+
+  // 高度小於 630px
+  @media screen and (max-height: 630px) {
+    .gates {
+      .gate-wrapper {
+        .notification {
+          top: -35px;
+        }
+      }
     }
   }
 }

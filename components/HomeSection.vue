@@ -5,9 +5,17 @@
       src="@/assets/images/home/space_grid_bg.svg"
       alt="space_grid_bg"
     />
-    <div class="msg-wrapper"></div>
+    <div class="msg-wrapper">
+      <div class="msg">
+        歡迎進入 2021 Fourdesire Playground<br />
+        在活動開始前，快去領取自己的專屬角色吧
+      </div>
+      <!-- <div class="msg msg-half">下載桌布</div>
+      <div class="msg msg-half">填寫問卷</div> -->
+    </div>
     <div class="fdid">Fourdesire ID_{{ fdid.toUpperCase() }}</div>
     <ResultBlock :character="character" :isAcquired="isAcquired" />
+    <div class="online">目前 Playground 共有 <strong>125</strong> 人</div>
     <div class="gates">
       <div class="gate-wrapper">
         <img

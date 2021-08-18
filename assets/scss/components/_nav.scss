@@ -32,7 +32,18 @@
     margin-top: 9px;
   }
 
+  .spacer {
+    width: 60px;
+    height: 60px;
+    border-radius: 24px;
+  }
+
   .menu-toggle-btn {
+    position: absolute;
+    z-index: 2;
+    top: 19px;
+    right: 21px;
+
     width: 60px;
     height: 60px;
     border-radius: 24px;
@@ -61,6 +72,110 @@
       }
       .bottom-bar {
         transform: rotate(-45deg) translate(3px, -2.5px);
+      }
+    }
+  }
+
+  .menu-layer {
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+    background-color: $white;
+    padding: 28px 16px 18px 16px;
+
+    overflow: scroll;
+
+    .home {
+      margin-left: 12px;
+    }
+
+    // 線上人數
+    .online {
+      margin: 19px auto 20px 12px;
+      color: #8196a0;
+    }
+
+    // ID
+    .fdid {
+      font-size: 13px;
+      color: $primary;
+      margin-left: 5px;
+      margin-top: 66px;
+    }
+
+    .link-wrapper {
+      position: relative;
+
+      // 提示
+      .notification {
+        position: absolute;
+        z-index: 1;
+        left: 21px;
+        top: -26px;
+      }
+    }
+
+    .menu-link {
+      display: block;
+      width: 100%;
+      height: 116px;
+      margin: 0 auto 4px auto;
+      color: $white;
+      border-radius: 18px;
+
+      background-size: cover;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+
+      position: relative;
+
+      &.home {
+        background-image: url('@/assets/images/nav/menu_bg_1@2x.png');
+        background-size: 116%;
+        background-position: 15% 66%;
+      }
+
+      &.char {
+        background-image: url('@/assets/images/nav/menu_bg_2@2x.png');
+        background-size: 105%;
+        background-position: 66% 56%;
+      }
+
+      &.gather {
+        background-image: url('@/assets/images/nav/menu_bg_3@2x.png');
+        background-size: 109%;
+        background-position: 34% 45%;
+      }
+
+      &.meet {
+        background-image: url('@/assets/images/nav/menu_bg_4@2x.png');
+        background-size: 100%;
+        background-position: 87% 53%;
+      }
+
+      &.pedia {
+        background-image: url('@/assets/images/nav/menu_bg_5@2x.png');
+        background-size: 116%;
+        background-position: -22% 33%;
+      }
+
+      // 遮罩
+      .block {
+        position: absolute;
+        inset: 0;
+        background-color: rgba($color: $white, $alpha: 0.76);
+
+        .lock {
+          position: absolute;
+          right: 13px;
+          bottom: 12px;
+        }
       }
     }
   }

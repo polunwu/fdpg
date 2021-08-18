@@ -66,11 +66,7 @@ import { getUser, charAcquired } from '@/utils/user'
 
 export default {
   data() {
-    const {
-      fdid,
-      character,
-      properties: { action, love, money, plan },
-    } = getUser()
+    const { fdid, character } = getUser()
 
     return {
       fdid: fdid || '',

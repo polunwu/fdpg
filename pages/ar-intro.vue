@@ -4,7 +4,7 @@
       <a class="back-link" @click.prevent="$router.back()">
         <img src="@/assets/images/icons/slide-arrow-left.svg" alt="back" />
       </a>
-      <NuxtLink class="home-link" to="/" @click.native="handleHomeClick">
+      <NuxtLink class="home-link" to="/">
         <img src="@/assets/images/icons/home-white.svg" alt="home" />
       </NuxtLink>
       <div class="spacer"></div>
@@ -85,9 +85,6 @@ export default {
     },
   },
   methods: {
-    handleHomeClick() {
-      this.$store.commit('showHome')
-    },
     handleNext() {
       if (this.swiper.isEnd) {
         console.log('end')

@@ -2,6 +2,9 @@ export default {
   ssr: false,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  server: {
+    port: 8000, // default: 3000
+  },
   router: {
     base: '/fdpg/',
     middleware: 'auth',

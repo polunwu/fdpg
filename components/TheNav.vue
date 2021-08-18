@@ -3,7 +3,7 @@
     <NuxtLink to="/pedia" class="pedia-link">
       <img src="~/assets/images/icons/awesome-book.svg" alt="icon book" />
     </NuxtLink>
-    <NuxtLink to="/" class="home-link" @click.native="handleHomeClick">
+    <NuxtLink to="/" class="home-link">
       <img src="~/assets/images/icons/home.svg" alt="icon home" />
     </NuxtLink>
     <div
@@ -27,9 +27,6 @@ export default {
   methods: {
     toggleNav() {
       this.isNavOpen = !this.isNavOpen
-    },
-    handleHomeClick() {
-      this.$store.commit('showHome')
     },
   },
 }

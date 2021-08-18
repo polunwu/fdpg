@@ -1,12 +1,3 @@
-export const state = () => ({
-  isOverview: false,
-})
+export const state = () => ({})
 
-export const mutations = {
-  showOverview(state) {
-    state.isOverview = true
-  },
-  showHome(state) {
-    state.isOverview = false
-  },
-}
+export const mutations = {}

@@ -1,16 +1,24 @@
 <template>
   <div id="page-home" :class="{ 'show-overview': isOverview }">
     <HomeSection />
-    <OverviewSection />
+    <OverviewSection :isOverview="isOverview" />
   </div>
 </template>
 
 <script>
 export default {
   layout: 'dashboard',
-  computed: {
-    isOverview() {
-      return this.$store.state.isOverview
+  data() {
+    return {
+      isOverview: !!this.$route.query.overview,
+    }
+  },
+  watch: {
+    '$route.query.overview': {
+      immediate: true,
+      handler(newVal) {
+        this.isOverview = newVal ? true : false
+      },
     },
   },
 }

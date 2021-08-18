@@ -95,7 +95,7 @@ export default {
       }
     },
     toOverview() {
-      this.$store.commit('showOverview')
+      this.$router.push({ path: '', query: { overview: true } })
     },
   },
 }

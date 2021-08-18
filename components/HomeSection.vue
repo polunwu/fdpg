@@ -12,57 +12,53 @@
       <div class="gate-wrapper">
         <img
           v-if="!isAcquired"
-          class="gate-notification"
+          class="notification"
           src="@/assets/images/icons/alert.svg"
           alt="alert"
         />
         <div @click="toOverview" class="gate char">
-          <span class="gate__name">角色</span>
-          <img
-            class="gate__bg"
-            src="@/assets/images/home/gate_1@2x.png"
-            alt="gate_1"
-          />
+          <span class="gate__name">專屬角色</span>
         </div>
-        <span class="gate-time"></span>
       </div>
       <div class="gate-wrapper">
+        <img
+          v-if="gather.leftTime.isUp"
+          class="notification"
+          src="@/assets/images/icons/alert.svg"
+          alt="alert"
+        />
         <a @click="toGather" class="gate gather">
-          <span class="gate__name">廣場</span>
-          <img
-            class="gate__bg"
-            src="@/assets/images/home/gate_2@2x.png"
-            alt="gate_1"
-          />
+          <span class="gate__name">Gather<br />城镇</span>
           <div v-show="!gather.leftTime.isUp" class="gate__block">
-            <img src="@/assets/images/icons/lock.svg" alt="lock" />
+            <img class="lock" src="@/assets/images/icons/lock.svg" alt="lock" />
           </div>
         </a>
-        <span
+        <!-- <span
           v-show="!gather.leftTime.isUp && gather.timerReady"
           class="gate-time"
           >{{ gather.leftTime.dd }}天 {{ gather.leftTime.hh }}:{{
             gather.leftTime.mm
           }}:{{ gather.leftTime.ss }}</span
-        >
+        > -->
       </div>
       <div class="gate-wrapper">
+        <img
+          v-if="meet.leftTime.isUp"
+          class="notification"
+          src="@/assets/images/icons/alert.svg"
+          alt="alert"
+        />
         <a @click="toMeet" class="gate meet">
-          <span class="gate__name">大廳</span>
-          <img
-            class="gate__bg"
-            src="@/assets/images/home/gate_3@2x.png"
-            alt="gate_1"
-          />
+          <span class="gate__name">Google<br />大廳</span>
           <div v-show="!meet.leftTime.isUp" class="gate__block">
-            <img src="@/assets/images/icons/lock.svg" alt="lock" />
+            <img class="lock" src="@/assets/images/icons/lock.svg" alt="lock" />
           </div>
         </a>
-        <span v-show="!meet.leftTime.isUp && meet.timerReady" class="gate-time"
+        <!-- <span v-show="!meet.leftTime.isUp && meet.timerReady" class="gate-time"
           >{{ meet.leftTime.dd }}天 {{ meet.leftTime.hh }}:{{
             meet.leftTime.mm
           }}:{{ meet.leftTime.ss }}</span
-        >
+        > -->
       </div>
     </div>
   </div>
@@ -142,7 +138,7 @@ export default {
     },
     toGather() {
       // 跳轉 gather
-      if (this.meet.leftTime.isUp) {
+      if (this.gather.leftTime.isUp) {
         window.open('https://www.google.com/', '_blank')
       }
     },

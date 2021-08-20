@@ -7,11 +7,13 @@
       @click="toggle"
       alt="card-img"
     />
-    <div class="card-bottom-layer" v-show="isShow">
-      <div class="close-btn" @click="isShow = false">
-        <img src="@/assets/images/icons/arrow-left.svg" alt="arrow-left" />
+    <transition name="fade">
+      <div class="card-bottom-layer" v-show="isShow">
+        <div class="close-btn" @click="isShow = false">
+          <img src="@/assets/images/icons/arrow-left.svg" alt="arrow-left" />
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -30,3 +32,14 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

@@ -15,7 +15,9 @@
     </div>
     <div class="fdid">Fourdesire ID_{{ fdid.toUpperCase() }}</div>
     <ResultBlock :character="character" :isAcquired="isAcquired" />
-    <div class="online">目前 Playground 共有 <strong>125</strong> 人</div>
+    <div class="online">
+      目前 Playground 共有 <strong>{{ onlineCount }}</strong> 人
+    </div>
     <div class="gates">
       <div class="gate-wrapper">
         <img
@@ -76,6 +78,7 @@ export default {
   },
   computed: {
     ...mapGetters('timer', ['gatherIsUp', 'meetIsUp']),
+    ...mapGetters('online', ['onlineCount']),
   },
   methods: {
     toMeet() {

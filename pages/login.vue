@@ -393,6 +393,7 @@
 import revealLogin from '@/timelines/revealLogin'
 import showVerifySuccess from '@/timelines/showVerifySuccess'
 import { setUser } from '@/utils/user'
+import { mapActions } from 'vuex'
 
 export default {
   data() {
@@ -428,6 +429,8 @@ export default {
         setTimeout(() => {
           setUser(JSON.stringify(resp)) // 儲存
           this.$router.push('/') // 跳轉
+          // 開始輪詢上線人數
+          this.poll()
         }, 3000)
       } catch (error) {
         this.verifying = false
@@ -435,6 +438,7 @@ export default {
         this.disableSubmit = false
       }
     },
+    ...mapActions('online', ['poll']),
   },
 }
 </script>

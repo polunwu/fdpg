@@ -22,7 +22,9 @@
           src="@/assets/images/icons/home.svg"
           alt="icon home"
         />
-        <div class="online">目前 Playground 共有 <strong>125</strong> 人</div>
+        <div class="online">
+          目前 Playground 共有 <strong>{{ onlineCount }}</strong> 人
+        </div>
         <NuxtLink to="/" class="menu-link home" @click.native="closeNav">
           <span>活動主頁</span>
         </NuxtLink>
@@ -102,6 +104,7 @@ export default {
   },
   computed: {
     ...mapGetters('timer', ['gatherIsUp', 'meetIsUp']),
+    ...mapGetters('online', ['onlineCount']),
   },
   methods: {
     toggleNav() {

@@ -6,7 +6,8 @@ const requestOnlineStatus = async function ($axios, commit) {
       'https://j9dh3ne194.execute-api.ap-northeast-2.amazonaws.com/fdpg2021/online_status',
       {
         fdid: getUser().fdid,
-      }
+      },
+      { progress: false }
     )
     console.log(online_count)
     commit('setCount', { count: online_count })
@@ -40,6 +41,11 @@ export const actions = {
       requestOnlineStatus(this.$axios, commit)
     }, 5000)
     commit('setTimerID', { timerID: timerID })
+
+    // 計時三小時，閒置過久清空計數器
+    setTimeout(() => {
+      commit('clearTimer')
+    }, 10800000)
   },
 
   clear({ commit }) {

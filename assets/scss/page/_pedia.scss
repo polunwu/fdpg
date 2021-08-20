@@ -6,7 +6,11 @@
   }
 
   .cards-container {
+    z-index: 0;
     margin-top: 39px;
+
+    display: flex;
+    flex-direction: column-reverse; // 上下反轉，z 軸堆疊才會正確
   }
 
   .card {
@@ -18,31 +22,56 @@
 
     // perspective: 500px;
 
-    &:nth-of-type(even) {
+    &:nth-of-type(odd) {
       .card-img {
         transform: perspective(500px) rotateX(10deg) rotateY(-20deg)
-          rotateZ(10deg);
+          rotateZ(10deg) translateZ(-100px) translateX(-30px);
       }
+      // translateZ 退後 100px 避免在透視上跟 nav 的面相交
     }
 
     .card-img {
-      height: 400px;
-      top: 0;
+      height: 500px;
+      top: 30vh;
 
       transform-origin: center;
 
       transform: perspective(500px) rotateX(10deg) rotateY(20deg)
-        rotateZ(-10deg);
+        rotateZ(-10deg) translateZ(-100px) translateX(30px);
 
       transition: all 0.5s;
 
       &.show {
         position: fixed;
         z-index: 999;
-        top: 10vh;
+        top: 15vh;
         height: 80vh;
         transform: perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
       }
+    }
+  }
+
+  .card-bottom-layer {
+    position: fixed;
+    z-index: 998;
+    inset: 0;
+    background-color: rgba($color: #e8ebed, $alpha: 0.9);
+
+    .close-btn {
+      position: absolute;
+      top: 19px;
+      left: 21px;
+      width: 60px;
+      height: 60px;
+      border-radius: 24px;
+      background-color: $white;
+      box-shadow: 0 5px 8px rgba($color: $primary, $alpha: 0.2);
+
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

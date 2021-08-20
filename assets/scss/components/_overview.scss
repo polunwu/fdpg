@@ -70,12 +70,18 @@
   }
 
   // 改寫 Swiper START
+  .swiper-container {
+    margin-top: 30px;
+  }
   .swiper-slide {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .swiper-button-prev,
   .swiper-button-next {
-    top: 60%;
+    top: 50%;
     background-color: $primary;
     width: 60px;
     height: 60px;
@@ -100,12 +106,15 @@
 
   // silde 內容圖片
   .slide-img {
-    width: 89vw;
+    width: 83vw;
     max-width: 348px;
   }
 
   // 高度小於 697px
   @media screen and (max-height: 697px) {
+    .swiper-container {
+      margin-top: 10px;
+    }
     .swiper-button-prev,
     .swiper-button-next {
       top: 56%;

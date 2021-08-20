@@ -9,7 +9,7 @@
     <template v-else>
       <img
         class="result__img"
-        :src="require(`@/assets/images/home/result_${character}@2x.png`)"
+        :src="require(`@/assets/images/char/${character}.png`)"
         :alt="character"
       />
       <img

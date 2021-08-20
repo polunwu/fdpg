@@ -52,7 +52,7 @@
             alt="alert"
           />
           <a @click="toGather" class="menu-link gather">
-            <span>Gather 城镇</span>
+            <span>Playland 辦公室</span>
             <div v-show="!gatherIsUp" class="block">
               <img
                 class="lock"
@@ -70,7 +70,7 @@
             alt="alert"
           />
           <a @click="toMeet" class="menu-link meet">
-            <span>Google 大廳</span>
+            <span>Meet 大廳</span>
             <div v-show="!meetIsUp" class="block">
               <img
                 class="lock"

@@ -38,7 +38,7 @@
           alt="alert"
         />
         <a @click="toGather" class="gate gather">
-          <span class="gate__name">Gather<br />城镇</span>
+          <span class="gate__name">Playland<br />辦公室</span>
           <div v-show="!gatherIsUp" class="gate__block">
             <img class="lock" src="@/assets/images/icons/lock.svg" alt="lock" />
           </div>
@@ -52,7 +52,7 @@
           alt="alert"
         />
         <a @click="toMeet" class="gate meet">
-          <span class="gate__name">Google<br />大廳</span>
+          <span class="gate__name">Meet<br />大廳</span>
           <div v-show="!meetIsUp" class="gate__block">
             <img class="lock" src="@/assets/images/icons/lock.svg" alt="lock" />
           </div>

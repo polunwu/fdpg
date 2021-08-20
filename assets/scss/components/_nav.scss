@@ -5,11 +5,13 @@
   left: 0;
   width: 100%;
 
-  padding: 19px 21px;
+  padding: 19px 21px 11px 21px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+
+  background-color: rgba($color: $white, $alpha: 0.9);
 
   .pedia-link {
     width: 60px;

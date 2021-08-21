@@ -1,6 +1,6 @@
 <template>
   <div id="overview-section">
-    <NuxtLink to="/ar-intro" class="ar-intro-link">解鎖專屬活動角色</NuxtLink>
+    <a href="/ar-intro" class="ar-intro-link">解鎖專屬活動角色</a>
     <NuxtLink to="/" class="top-btn" :class="{ show: isOverview }">
       <img src="@/assets/images/icons/arrow-up.svg" alt="arrow_up" />
     </NuxtLink>

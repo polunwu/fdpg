@@ -14,3 +14,11 @@ export function clearUser() {
 export function charAcquired() {
   return localStorage.getItem(ACQUIRED_KEY_NAME)
 }
+
+export function logout() {
+  localStorage.removeItem(USER_KEY_NAME)
+  localStorage.removeItem(ACQUIRED_KEY_NAME)
+  setTimeout(() => {
+    window.location.reload()
+  }, 50)
+}

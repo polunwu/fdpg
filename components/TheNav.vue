@@ -73,6 +73,7 @@
         <NuxtLink to="/pedia" class="menu-link pedia" @click.native="closeNav">
           <span>Playground 角色百科</span>
         </NuxtLink>
+        <a class="logout" @click="logout">登出</a>
         <div class="rights">© Fourdesire. All Rights Reserved.</div>
       </div>
     </transition>
@@ -81,7 +82,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { charAcquired } from '@/utils/user'
+import { charAcquired, logout } from '@/utils/user'
 
 export default {
   data() {
@@ -101,6 +102,7 @@ export default {
     closeNav() {
       this.isNavOpen = false
     },
+    logout,
   },
 }
 </script>

@@ -30,7 +30,7 @@
         </NuxtLink>
         <div class="link-wrapper">
           <img
-            v-if="true"
+            v-if="!isAcquired"
             class="notification"
             src="@/assets/images/icons/alert.svg"
             alt="alert"

@@ -128,6 +128,7 @@ function showResultModel() {
   const modal = document.querySelector('#snap-modal')
   modal.scrollTop = 0
   modal.classList.add('show')
+  document.querySelector('.result-block').classList.remove('hide')
 }
 
 // 截圖
@@ -209,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     document.querySelector('#snap-modal').classList.remove('show')
     setTimeout(() => {
       document.querySelector('#snap-modal .result').src = ''
-      document.querySelector('.result-block').classList.remove('hide')
+      document.querySelector('.result-block').classList.add('hide')
     }, 400)
   })
 

@@ -14,40 +14,27 @@
     <!-- merge-images -->
     <script src="https://unpkg.com/merge-images"></script>
 
+
     <script src="ar/gesture-detector.js"></script>
     <script src="ar/gesture-handler.js"></script>
   </head>
 
   <body>
     <!-- Loader -->
-    <div id="loader">Loading...</div>
+    <div id="loader">載入中...</div>
 
     <!-- A-frame -->
     <!-- SEE: https://github.com/fcor/arjs-gestures/blob/master/index.html -->
     <a-scene
       arjs
       embedded
-      renderer="logarithmicDepthBuffer: true;"
+      renderer="logarithmicDepthBuffer: true; colorManagement: true;"
       vr-mode-ui="enabled: false"
       gesture-detector
       id="scene"
+      light="defaultLightsEnabled: false"
     >
       <a-assets>
-        <a-asset-item
-          id="box"
-          src="ar/model/untitled/Untitled.gltf"
-        >
-        </a-asset-item>
-        <a-asset-item
-          id="water"
-          src="ar/model/water/water.gltf"
-        >
-        </a-asset-item>
-        <a-asset-item
-          id="robot"
-          src="ar/model/robot/BrainStem.glb"
-        >
-        </a-asset-item>
       </a-assets>
 
       <a-marker
@@ -63,7 +50,7 @@
         <!-- name, it just loops all the animations of the model  -->
         <a-entity
           id="bowser-model"
-          animation-mixer
+          animation-mixer="timeScale: 1;"
           gltf-model=""
           position="0 0 0"
           scale="1 1 1"
@@ -72,17 +59,84 @@
         >
         </a-entity>
       </a-marker>
+      <!-- Custom light -->
+      <a-entity light="type: ambient; color: #FFF"></a-entity>
+      <a-entity light="type: directional; color: #FFF; intensity: 0.2" position="0 1 2"></a-entity>
       <a-entity camera></a-entity>
     </a-scene>
 
     <!-- UI -->
-    <div id="snap-btn">
-      <img class="icon" src="ar/images/photo.png" alt="take photo">
+    <div class="back-btn js-back-home">
+      <img class="icon" src="ar/images/back.svg" alt="back to home">
+    </div>
+    <div class="info-btn">
+      <img class="icon" src="ar/images/info.svg" alt="info">
+    </div>
+    <div class="info-modal">
+      <div class="close-btn">
+        <img class="icon" src="ar/images/close.svg" alt="close">
+        <div class="close-text">返回</div>
+      </div>
+      <h3 class="info-title">專屬活動角色解鎖方法</h3>
+      <div class="describe-wrapper">
+        <div class="describe">
+          <img class="describe__img" src="ar/images/intro_1.gif" alt="info-1">
+          <p class="describe__text">
+            你需要找到「物資包」中的神聖印記 ...
+          </p>
+        </div>
+        <div class="describe">
+          <img class="describe__img" src="ar/images/intro_2.gif" alt="info-2">
+          <p class="describe__text">
+            將相機對準印記，系統就可進行分析 ...
+          </p>
+        </div>
+        <div class="describe">
+          <img class="describe__img" src="ar/images/intro_3.gif" alt="info-3">
+          <p class="describe__text">
+            請將分析結果「截圖」下來，分享至 instagram
+          </p>
+        </div>
+      </div>
+    </div>
+    <img class="marker-hint" src="ar/images/marker-hint.png" alt="marker-hint">
+    <div id="snap-btn" class="hide">
+      <div class="snap-text">
+        <img class="icon" src="ar/images/photo.svg" alt="take photo">
+        <span>截圖結果</span>
+      </div>
     </div>
 
-    <!-- <div id="snap-frame">
-      <img class="result" src="" alt="">
-    </div> -->
+    <div id="snap-modal">
+      <div class="result-wrapper">
+        <img class="result" src="" alt="">
+        <div class="result-block">
+          <img class="result-loader" src="ar/images/snap-loader.svg" alt="result loader">
+          <img class="result-logo" src="ar/images/snap-logo.svg" alt="result logo">
+        </div>
+      </div>
+      <h4 class="press-hint">手機長按圖片下載就可以加到相簿！</h4>
+      <div class="again">
+        重新拍照
+      </div>
+      <section class="hashtag-section">
+        <div class="hashtags">
+          <p>
+            #FourdesirePlayground2021<br>
+            #我是玩新探險家勾勾狸<br>
+            #生活遊樂場
+          </p>
+          <span class="copy-hint">已複製</span>
+          <div class="copy-btn">複製 Hashtag 至 IG</div>
+        </div>
+      </section>
+      <img class="share" src="ar/images/intro_3.gif" alt="share">
+      <h4 class="share-hint">
+        和大家分享你的<br>Fourdesire Playground 專屬角色吧！
+      </h4>
+      <div class="back-home js-back-home">成功取得角色，返回主頁</div>
+    </div>
+    <div id="snap-flash"></div>
     <script src="ar-character.js"></script>
   </body>
 </html>

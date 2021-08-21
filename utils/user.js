@@ -1,15 +1,16 @@
-const KEY_NAME = 'ozj32uqurm'
+const USER_KEY_NAME = 'ozj32uqurm'
+const ACQUIRED_KEY_NAME = 'u3fm32k6rul3nk4'
 
 export function getUser() {
-  return JSON.parse(localStorage.getItem(KEY_NAME))
+  return JSON.parse(localStorage.getItem(USER_KEY_NAME))
 }
 export function setUser(user) {
-  localStorage.setItem(KEY_NAME, user)
+  localStorage.setItem(USER_KEY_NAME, user)
 }
 export function clearUser() {
-  localStorage.removeItem(KEY_NAME)
+  localStorage.removeItem(USER_KEY_NAME)
 }
 
 export function charAcquired() {
-  return localStorage.getItem('u3fm32k6rul3nk4')
+  return localStorage.getItem(ACQUIRED_KEY_NAME)
 }

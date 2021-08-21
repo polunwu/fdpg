@@ -51,16 +51,13 @@
             src="@/assets/images/icons/alert.svg"
             alt="alert"
           />
-          <a @click="toGather" class="menu-link gather">
+          <NuxtLink
+            to="/playland"
+            class="menu-link gather"
+            @click.native="closeNav"
+          >
             <span>Playland 辦公室</span>
-            <div v-show="!gatherIsUp" class="block">
-              <img
-                class="lock"
-                src="@/assets/images/icons/lock.svg"
-                alt="lock"
-              />
-            </div>
-          </a>
+          </NuxtLink>
         </div>
         <div class="link-wrapper">
           <img
@@ -69,16 +66,9 @@
             src="@/assets/images/icons/alert.svg"
             alt="alert"
           />
-          <a @click="toMeet" class="menu-link meet">
+          <NuxtLink to="meet" class="menu-link meet" @click.native="closeNav">
             <span>Meet 大廳</span>
-            <div v-show="!meetIsUp" class="block">
-              <img
-                class="lock"
-                src="@/assets/images/icons/lock.svg"
-                alt="lock"
-              />
-            </div>
-          </a>
+          </NuxtLink>
         </div>
         <NuxtLink to="/pedia" class="menu-link pedia" @click.native="closeNav">
           <span>Playground 角色百科</span>
@@ -112,18 +102,6 @@ export default {
     },
     closeNav() {
       this.isNavOpen = false
-    },
-    toMeet() {
-      // 跳轉 google meet
-      if (this.meetIsUp) {
-        window.open('https://www.google.com/', '_blank')
-      }
-    },
-    toGather() {
-      // 跳轉 gather
-      if (this.gatherIsUp) {
-        window.open('https://www.google.com/', '_blank')
-      }
     },
   },
 }

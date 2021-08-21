@@ -37,12 +37,9 @@
           src="@/assets/images/icons/alert.svg"
           alt="alert"
         />
-        <a @click="toGather" class="gate gather">
+        <NuxtLink to="/playland" class="gate gather">
           <span class="gate__name">Playland<br />辦公室</span>
-          <div v-show="!gatherIsUp" class="gate__block">
-            <img class="lock" src="@/assets/images/icons/lock.svg" alt="lock" />
-          </div>
-        </a>
+        </NuxtLink>
       </div>
       <div class="gate-wrapper">
         <img
@@ -51,12 +48,9 @@
           src="@/assets/images/icons/alert.svg"
           alt="alert"
         />
-        <a @click="toMeet" class="gate meet">
+        <NuxtLink to="/meet" class="gate meet">
           <span class="gate__name">Meet<br />大廳</span>
-          <div v-show="!meetIsUp" class="gate__block">
-            <img class="lock" src="@/assets/images/icons/lock.svg" alt="lock" />
-          </div>
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </div>
@@ -81,18 +75,6 @@ export default {
     ...mapGetters('online', ['onlineCount']),
   },
   methods: {
-    toMeet() {
-      // 跳轉 google meet
-      if (this.meetIsUp) {
-        window.open('https://www.google.com/', '_blank')
-      }
-    },
-    toGather() {
-      // 跳轉 gather
-      if (this.gatherIsUp) {
-        window.open('https://www.google.com/', '_blank')
-      }
-    },
     toOverview() {
       this.$router.push({ path: '', query: { overview: true } })
     },

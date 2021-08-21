@@ -177,6 +177,16 @@
       left: 100%;
     }
   }
+
+  .rights {
+    position: absolute;
+    color: $primary;
+    font-size: 13px;
+    bottom: 22px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @keyframes rotate {

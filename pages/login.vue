@@ -388,6 +388,7 @@
         <p class="verify__msg">{{ verifyMsg }}</p>
       </div>
     </div>
+    <span ref="rights" class="rights">© Fourdesire. All Rights Reserved.</span>
   </div>
 </template>
 

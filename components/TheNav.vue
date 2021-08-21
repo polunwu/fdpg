@@ -73,7 +73,7 @@
         <NuxtLink to="/pedia" class="menu-link pedia" @click.native="closeNav">
           <span>Playground 角色百科</span>
         </NuxtLink>
-        <div class="fdid">Fourdesire ID_{{ fdid.toUpperCase() }}</div>
+        <div class="rights">© Fourdesire. All Rights Reserved.</div>
       </div>
     </transition>
   </nav>
@@ -81,15 +81,13 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getUser, charAcquired } from '@/utils/user'
+import { charAcquired } from '@/utils/user'
 
 export default {
   data() {
-    const { fdid } = getUser()
     return {
       isNavOpen: false,
       isAcquired: charAcquired() ? true : false, // 是否已取得角色
-      fdid: fdid || '',
     }
   },
   computed: {

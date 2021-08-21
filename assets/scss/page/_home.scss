@@ -21,7 +21,7 @@
   left: 0;
   overflow: hidden;
   background: $white;
-  padding-top: 90px;
+  padding-top: 162px;
 
   transition: top $elevatorDuration $elevatorCurve;
 
@@ -39,6 +39,13 @@
 
   // 提示訊息
   .msg-wrapper {
+    position: absolute;
+    z-index: 10;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 318px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +64,7 @@
       justify-content: center;
       align-items: center;
 
-      background: $light-blue;
+      background: rgba($color: $light-blue, $alpha: 0.9);
       color: $white;
       font-size: 14px;
       line-height: 20px;
@@ -212,19 +219,7 @@
 
   // 高度小於 697px
   @media screen and (max-height: 697px) {
-    // 提示訊息
-    .msg-wrapper {
-      position: absolute;
-      z-index: 10;
-      top: 90px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 318px;
-
-      .msg {
-        background: rgba($color: $light-blue, $alpha: 0.9);
-      }
-    }
+    padding-top: 90px;
 
     // 上線人數
     .online {

@@ -347,19 +347,21 @@
         alt="logo_playground"
       />
       <div ref="loginInputGroup" class="login__input-group">
-        <input
-          ref="loginInput"
-          v-model="fdid"
-          class="login__input"
-          type="text"
-          placeholder="輸入 Fourdeisre ID"
-        />
-        <button
-          v-if="fdid"
-          @click="onSubmit"
-          :disabled="disableSubmit"
-          class="login__submit"
-        ></button>
+        <form @submit.prevent="onSubmit">
+          <input
+            ref="loginInput"
+            v-model="fdid"
+            class="login__input"
+            type="text"
+            placeholder="輸入 Fourdeisre ID"
+          />
+          <button
+            v-if="fdid"
+            type="submit"
+            :disabled="disableSubmit"
+            class="login__submit"
+          ></button>
+        </form>
         <div v-if="error" class="login__error">{{ error }}</div>
       </div>
     </div>

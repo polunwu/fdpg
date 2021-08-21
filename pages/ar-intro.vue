@@ -63,6 +63,7 @@
 <script>
 import randomFloating from '@/timelines/randomFloating'
 export default {
+  layout: 'dashboard',
   data() {
     return {
       swiperOption: {

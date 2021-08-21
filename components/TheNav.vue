@@ -1,5 +1,5 @@
 <template>
-  <nav id="nav">
+  <nav id="nav" :class="{ hide: isHide, transparent: isTransparent }">
     <NuxtLink to="/pedia" class="pedia-link">
       <img src="@/assets/images/icons/awesome-book.svg" alt="icon book" />
     </NuxtLink>
@@ -89,7 +89,19 @@ export default {
     return {
       isNavOpen: false,
       isAcquired: charAcquired() ? true : false, // 是否已取得角色
+      isHide: false,
+      isTransparent: false,
     }
+  },
+  watch: {
+    $route: {
+      immediate: true,
+      handler(to) {
+        // route 對應特殊樣式
+        this.isHide = to.name === 'ar-intro' ? true : false
+        this.isTransparent = to.name === 'index' ? true : false
+      },
+    },
   },
   computed: {
     ...mapGetters('timer', ['gatherIsUp', 'meetIsUp']),

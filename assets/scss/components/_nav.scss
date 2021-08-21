@@ -13,6 +13,19 @@
 
   background-color: rgba($color: $white, $alpha: 0.9);
 
+  // ar-intro 頁隱藏
+  transition: opacity 0.5s, background-color 0.5s;
+  &.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    background-color: transparent;
+  }
+  // 首頁底為透明
+  &.transparent {
+    background-color: transparent;
+  }
+
   .pedia-link {
     width: 60px;
     height: 60px;

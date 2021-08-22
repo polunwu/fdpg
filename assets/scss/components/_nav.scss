@@ -205,4 +205,53 @@
       }
     }
   }
+
+  @media screen and (min-width: $pc-breakpoint) {
+    padding-left: 29px;
+
+    .pedia-link {
+      position: absolute;
+      z-index: 0;
+      top: 19px;
+      right: 96px;
+    }
+    .menu-layer {
+      width: 500px;
+      left: auto;
+
+      // 遮罩
+      &::after {
+        content: '';
+        display: block;
+        position: fixed;
+        z-index: -1;
+        inset: 0;
+        right: 500px;
+        background-color: $primary;
+        opacity: 0.9;
+      }
+
+      .online {
+        display: none;
+      }
+      img.home {
+        margin-bottom: 60px;
+      }
+      .link-wrapper {
+        max-width: 358px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .menu-link {
+        max-width: 358px;
+      }
+      .menu-link.char {
+        display: none;
+      }
+
+      .rights {
+        display: none;
+      }
+    }
+  }
 }

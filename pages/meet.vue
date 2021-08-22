@@ -42,6 +42,7 @@
         </p>
       </div>
     </div>
+    <div class="rights">© Fourdesire. All Rights Reserved.</div>
 
     <a class="link" @click="toMeet">
       進入 Meet 大廳
@@ -49,6 +50,7 @@
         <img class="icon" src="@/assets/images/icons/lock.svg" />
       </div>
     </a>
+    <img class="pc-card" src="@/assets/images/meet/pc/card@2x.png" alt="card" />
   </div>
 </template>
 
@@ -62,8 +64,10 @@ export default {
   methods: {
     toMeet() {
       // 跳轉 gather
-      if (this.meet) {
-        window.open('https://www.google.com/', '_blank')
+      if (this.meetIsUp) {
+        setTimeout(() => {
+          window.open('https://www.google.com/', '_blank')
+        }, 500)
       }
     },
   },

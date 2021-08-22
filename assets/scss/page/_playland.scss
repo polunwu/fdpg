@@ -17,6 +17,15 @@
   .top-img {
     width: 100%;
   }
+  .pc-top-img {
+    display: none;
+  }
+  .rights {
+    margin-top: 128px;
+    text-align: center;
+    font-size: 13px;
+    color: $primary;
+  }
 
   // 標題
   .title {
@@ -57,12 +66,13 @@
     left: 38px;
     right: 38px;
     overflow: hidden;
+    cursor: pointer;
 
     display: block;
     border: 14px solid $primary;
-    height: 116px;
+    height: 113px;
     border-radius: 60px;
-    box-shadow: 0px 3px 6px rgba($color: $primary, $alpha: 0.2);
+    box-shadow: 0px 10px 13px rgba($color: $primary, $alpha: 0.16);
 
     line-height: 88px;
     text-align: center;
@@ -84,6 +94,63 @@
         top: 27px;
         right: 28px;
       }
+    }
+  }
+  .pc-card {
+    display: none;
+  }
+
+  // 桌機
+  @media screen and (min-width: $pc-breakpoint) {
+    max-width: 794px;
+    padding: 110px 0px 21px 0px;
+
+    .rights {
+      margin-top: 150px;
+    }
+
+    .top-img {
+      display: none;
+    }
+    .pc-top-img {
+      display: block;
+      width: 100%;
+    }
+
+    // 標題
+    .title {
+      margin-top: 55px;
+      margin-bottom: 50px;
+    }
+
+    .block {
+      margin-bottom: 22px;
+
+      &__img {
+        width: 100%;
+      }
+      &__text {
+        padding: 0 26px;
+      }
+    }
+
+    .link {
+      width: 314px;
+      left: auto;
+      right: 21px;
+      bottom: 27px;
+    }
+    .link:active ~ .pc-card {
+      bottom: 50px;
+    }
+    .pc-card {
+      display: block;
+      position: absolute;
+      right: 86px;
+      bottom: 113px;
+      width: 184px;
+      z-index: 40;
+      transition: bottom 0.2s ease;
     }
   }
 }

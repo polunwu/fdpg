@@ -8,8 +8,8 @@
       alt="card-img"
     />
     <transition name="fade">
-      <div class="card-bottom-layer" v-show="isShow">
-        <div class="close-btn" @click="isShow = false">
+      <div class="card-bottom-layer" v-show="isShow" @click="close">
+        <div class="close-btn" @click="close">
           <img src="@/assets/images/icons/arrow-left.svg" alt="arrow-left" />
         </div>
       </div>
@@ -28,6 +28,9 @@ export default {
   methods: {
     toggle() {
       this.isShow = !this.isShow
+    },
+    close() {
+      this.isShow = false
     },
   },
 }

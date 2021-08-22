@@ -2,10 +2,19 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  padding: 100px 8px 128px 8px;
+  padding: 100px 8px 30px 8px;
 
   .top-img {
     width: 100%;
+  }
+  .pc-top-img {
+    display: none;
+  }
+  .rights {
+    margin-top: 128px;
+    text-align: center;
+    font-size: 13px;
+    color: $primary;
   }
 
   .cards-container {
@@ -75,6 +84,23 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+  }
+
+  @media screen and (min-width: $pc-breakpoint) {
+    max-width: 794px;
+    padding: 110px 0px 21px 0px;
+
+    .rights {
+      margin-top: 150px;
+    }
+
+    .top-img {
+      display: none;
+    }
+    .pc-top-img {
+      display: block;
+      width: 100%;
     }
   }
 }

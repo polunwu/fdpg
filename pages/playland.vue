@@ -5,6 +5,11 @@
       src="@/assets/images/playland/top-img@2x.png"
       alt="top img"
     />
+    <img
+      class="pc-top-img"
+      src="@/assets/images/playland/pc/top-img@2x.png"
+      alt="top img"
+    />
     <h2 class="title">Playland 辦公室指南</h2>
     <div class="block-wrapper">
       <div class="block">
@@ -87,12 +92,14 @@
         </p>
       </div>
     </div>
+    <div class="rights">© Fourdesire. All Rights Reserved.</div>
 
     <a class="link" @click="toGather">
       進入 Playland 辦公室
       <div class="lock" v-show="!gatherIsUp">
         <img class="icon" src="@/assets/images/icons/lock.svg" /></div
     ></a>
+    <img class="pc-card" src="@/assets/images/meet/pc/card@2x.png" alt="card" />
   </div>
 </template>
 
@@ -107,7 +114,9 @@ export default {
     toGather() {
       // 跳轉 gather
       if (this.gatherIsUp) {
-        window.open('https://www.google.com/', '_blank')
+        setTimeout(() => {
+          window.open('https://www.google.com/', '_blank')
+        }, 500)
       }
     },
   },

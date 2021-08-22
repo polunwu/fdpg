@@ -1,9 +1,9 @@
 import { countDownFrom } from '@/utils/countDownFrom'
 // 計數器，計算剩餘時間
 const gatherCounter = countDownFrom('2021/09/04 16:20:00 UTC+8') // 指定台北時區
-const meetCounter = countDownFrom('2021/09/04 11:55:00 UTC+8')
+// const meetCounter = countDownFrom('2021/09/04 11:55:00 UTC+8')
 // const gatherCounter = countDownFrom('2021/08/18 16:53:00 UTC+8') // 指定台北時區
-// const meetCounter = countDownFrom('2021/08/18 16:59:00 UTC+8')
+const meetCounter = countDownFrom('2021/08/18 16:59:00 UTC+8')
 
 export const state = () => ({
   gather: {

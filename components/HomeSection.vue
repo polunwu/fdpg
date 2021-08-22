@@ -5,6 +5,11 @@
       src="@/assets/images/home/space_grid_bg.svg"
       alt="space_grid_bg"
     />
+    <img
+      class="pc-bg"
+      src="@/assets/images/home/pc/space_grid_bg.svg"
+      alt="space_grid_bg"
+    />
     <div class="msg-wrapper">
       <div class="msg">
         歡迎進入 2021 Fourdesire Playground<br />
@@ -53,6 +58,7 @@
         </NuxtLink>
       </div>
     </div>
+    <div class="pc-rights">© Fourdesire. All Rights Reserved.</div>
   </div>
 </template>
 

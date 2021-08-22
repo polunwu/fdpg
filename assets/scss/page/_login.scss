@@ -199,7 +199,7 @@
     text-align: center;
   }
 
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: $pc-breakpoint) {
     // 桌機
     .space-grid {
       display: none;

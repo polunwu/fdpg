@@ -36,6 +36,12 @@
 
     transition: top $elevatorDuration $elevatorCurve;
   }
+  .pc-bg {
+    display: none;
+  }
+  .pc-rights {
+    display: none;
+  }
 
   // 提示訊息
   .msg-wrapper {
@@ -241,6 +247,90 @@
       .gate-wrapper {
         .notification {
           top: -35px;
+        }
+      }
+    }
+  }
+
+  // 桌機
+  @media screen and (min-width: $pc-breakpoint) {
+    padding-top: 145px !important;
+    .bg {
+      display: none;
+    }
+    .pc-bg {
+      display: block;
+      position: fixed;
+      z-index: -1;
+      height: auto;
+      width: 111vw;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+      transition: top $elevatorDuration $elevatorCurve;
+    }
+    .pc-rights {
+      display: block;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      line-height: 18px;
+      color: $primary;
+      left: 0;
+      bottom: 16px;
+    }
+    .fdid {
+      padding: 5px 19px 12px 29px;
+      text-align: left;
+    }
+    .online {
+      display: block !important; // ㄧ定顯示
+      text-align: left;
+      padding-left: 29px;
+      position: absolute;
+      top: 119px;
+      left: 0;
+    }
+    .result {
+      max-width: 493px;
+      transform: translateX(-116px); //左移
+    }
+    .gates {
+      flex-direction: column-reverse;
+      bottom: auto;
+      top: 172px;
+      transform: translateX(127px);
+
+      .gate-wrapper:first-child {
+        display: none;
+      }
+      .gate-wrapper {
+        width: 217px;
+        max-width: 217px;
+        margin-bottom: 15px;
+
+        .gate {
+          height: 216px;
+          max-height: 216px;
+          box-shadow: none;
+          font-size: 27px;
+          line-height: 35px;
+        }
+
+        // 廣場
+        .gate.gather {
+          background-image: url('@/assets/images/home/pc/gate_2_bg@2x.png');
+        }
+        // 大廳
+        .gate.meet {
+          background-image: url('@/assets/images/home/pc/gate_3_bg@2x.png');
+        }
+
+        .notification {
+          left: -15px;
+          top: -14px;
         }
       }
     }

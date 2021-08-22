@@ -8,6 +8,7 @@ export default function revealLogin({
   loginInputGroup,
   loginInput,
   rights,
+  pc30,
 }) {
   gsap
     .timeline({
@@ -85,7 +86,10 @@ export default function revealLogin({
       // 白色版權
       rights,
       {
-        color: '#fff',
+        color: () => {
+          // 桌機隱藏
+          return window.innerWidth > 1024 ? 'transparent' : '#fff'
+        },
       },
       '<'
     )
@@ -113,6 +117,31 @@ export default function revealLogin({
         duration: 0.4,
         stagger: 0.2,
       }
+    )
+    .fromTo(
+      // 桌機小球
+      '.pc-ball',
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 0.4,
+        stagger: 0.2,
+      },
+      '<'
+    )
+    .fromTo(
+      // 桌機30
+      pc30,
+      {
+        autoAlpha: 0,
+      },
+      {
+        autoAlpha: 1,
+        duration: 1,
+      },
+      '<1'
     )
     .fromTo(
       // 登入欄位

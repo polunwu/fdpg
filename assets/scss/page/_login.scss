@@ -29,6 +29,17 @@
     }
   }
 
+  // 桌機
+  .pc-space-grid {
+    display: none;
+    .pc-ball {
+      opacity: 0;
+    }
+  }
+  .pc-30 {
+    display: none;
+  }
+
   // 載入標誌
   .logo-loader {
     position: absolute;
@@ -186,6 +197,32 @@
     left: 0;
     width: 100%;
     text-align: center;
+  }
+
+  @media screen and (min-width: 1025px) {
+    // 桌機
+    .space-grid {
+      display: none;
+    }
+    // 網格
+    .pc-space-grid {
+      display: block;
+      position: absolute;
+      width: 111vw;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    // 30
+    .pc-30 {
+      display: block;
+      position: absolute;
+      width: 92px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 34px;
+    }
   }
 }
 

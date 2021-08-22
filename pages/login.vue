@@ -327,6 +327,445 @@
         </g>
       </g>
     </svg>
+    <!-- pc -->
+    <svg
+      class="pc-space-grid"
+      xmlns="http://www.w3.org/2000/svg"
+      width="1422.085"
+      height="1438.107"
+      viewBox="0 0 1422.085 1438.107"
+    >
+      <g
+        id="Group_891"
+        data-name="Group 891"
+        transform="translate(60.292 352.294)"
+      >
+        <g
+          id="Group_846"
+          data-name="Group 846"
+          transform="translate(5515.452 1173.468)"
+          opacity="0.475"
+        >
+          <line
+            id="Line_22"
+            data-name="Line 22"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4966.877 -1015.246)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <g
+            id="Group_844"
+            data-name="Group 844"
+            transform="translate(-5575.244 -1525.468)"
+          >
+            <path
+              id="Path_525"
+              data-name="Path 525"
+              d="M-5575.245,1619.256l372.408-509.412,1048.674.3"
+              transform="translate(5575.245 -181.738)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <path
+              id="Path_526"
+              data-name="Path 526"
+              d="M-5574.544,1303.951l372.232-363.823,1048.674.3"
+              transform="translate(5574.791 -71.793)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <path
+              id="Path_527"
+              data-name="Path 527"
+              d="M-5573.843,988.647l372.057-218.233,1048.675.3"
+              transform="translate(5574.336 38.152)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <path
+              id="Path_528"
+              data-name="Path 528"
+              d="M-5573.143,673.342-5201.26,600.7l1048.675.3"
+              transform="translate(5573.883 148.097)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <path
+              id="Path_529"
+              data-name="Path 529"
+              d="M-5572.441,223.859l371.708,72.945,1048.675.3"
+              transform="translate(5573.429 392.22)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <path
+              id="Path_530"
+              data-name="Path 530"
+              d="M-5571.74-359.25l371.532,218.534,1048.675.3"
+              transform="translate(5572.974 769.97)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <path
+              id="Path_531"
+              data-name="Path 531"
+              d="M-5571.04-942.359l371.357,364.123,1048.676.3"
+              transform="translate(5572.521 1147.719)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <path
+              id="Path_532"
+              data-name="Path 532"
+              d="M-5570.339-1525.468l371.182,509.712,1048.676.3"
+              transform="translate(5572.066 1525.468)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+          </g>
+          <g
+            id="Group_845"
+            data-name="Group 845"
+            transform="translate(-5575.244 -1525.468)"
+          >
+            <line
+              id="Line_23"
+              data-name="Line 23"
+              y1="418.843"
+              x2="0.503"
+              transform="translate(372.407 509.337)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <line
+              id="Line_24"
+              data-name="Line 24"
+              y1="564.368"
+              x2="0.678"
+              transform="translate(319.206 436.575)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <line
+              id="Line_25"
+              data-name="Line 25"
+              y1="709.893"
+              x2="0.853"
+              transform="translate(266.005 363.812)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <line
+              id="Line_26"
+              data-name="Line 26"
+              y1="855.418"
+              x2="1.028"
+              transform="translate(212.804 291.05)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <line
+              id="Line_27"
+              data-name="Line 27"
+              y1="1000.943"
+              x2="1.203"
+              transform="translate(159.603 218.287)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <line
+              id="Line_28"
+              data-name="Line 28"
+              y1="1146.468"
+              x2="1.378"
+              transform="translate(106.402 145.525)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <line
+              id="Line_29"
+              data-name="Line 29"
+              y1="1291.993"
+              x2="1.553"
+              transform="translate(53.201 72.762)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+            <line
+              id="Line_30"
+              data-name="Line 30"
+              y1="1437.518"
+              x2="1.728"
+              transform="translate(0 0)"
+              fill="none"
+              stroke="#d0d0d0"
+              stroke-miterlimit="10"
+              stroke-width="1"
+            />
+          </g>
+          <line
+            id="Line_31"
+            data-name="Line 31"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-5145.263 -1015.761)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_32"
+            data-name="Line 32"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-5086.847 -1015.39)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_33"
+            data-name="Line 33"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-5027.612 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_34"
+            data-name="Line 34"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4906.646 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_35"
+            data-name="Line 35"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4846.163 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_36"
+            data-name="Line 36"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4785.679 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_37"
+            data-name="Line 37"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4725.197 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_38"
+            data-name="Line 38"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4664.713 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_39"
+            data-name="Line 39"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4604.23 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_40"
+            data-name="Line 40"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4544.544 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_41"
+            data-name="Line 41"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4484.46 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_42"
+            data-name="Line 42"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4424.375 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_43"
+            data-name="Line 43"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4364.291 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_44"
+            data-name="Line 44"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4304.838 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_45"
+            data-name="Line 45"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4245.387 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+          <line
+            id="Line_46"
+            data-name="Line 46"
+            y1="418.542"
+            x2="0.503"
+            transform="translate(-4185.935 -1015.319)"
+            fill="none"
+            stroke="#d0d0d0"
+            stroke-miterlimit="10"
+            stroke-width="1"
+          />
+        </g>
+        <g id="Group_848" data-name="Group 848" transform="translate(12 -32)">
+          <circle
+            class="pc-ball"
+            id="Ellipse_1"
+            data-name="Ellipse 1"
+            cx="13.5"
+            cy="13.5"
+            r="13.5"
+            transform="translate(645 236)"
+            fill="#ff7a87"
+          />
+          <circle
+            class="pc-ball"
+            id="Ellipse_2"
+            data-name="Ellipse 2"
+            cx="13.5"
+            cy="13.5"
+            r="13.5"
+            transform="translate(525 236)"
+            fill="#5383d9"
+          />
+          <circle
+            class="pc-ball"
+            id="Ellipse_114"
+            data-name="Ellipse 114"
+            cx="13.5"
+            cy="13.5"
+            r="13.5"
+            transform="translate(585 236)"
+            fill="#ac6eb3"
+          />
+          <circle
+            class="pc-ball"
+            id="Ellipse_4"
+            data-name="Ellipse 4"
+            cx="13.5"
+            cy="13.5"
+            r="13.5"
+            transform="translate(705 236)"
+            fill="#ffc03d"
+          />
+        </g>
+      </g>
+    </svg>
+    <img
+      ref="pc30"
+      class="pc-30"
+      src="@/assets/images/login/pc/30.svg"
+      alt="30"
+    />
+    <!-- pc -->
+
     <img
       ref="logoLoader"
       class="logo-loader"

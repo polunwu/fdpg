@@ -296,6 +296,10 @@
     .result {
       max-width: 493px;
       transform: translateX(-116px); //左移
+
+      &__again {
+        display: none;
+      }
     }
     .gates {
       flex-direction: column-reverse;

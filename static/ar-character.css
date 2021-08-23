@@ -17,6 +17,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Segoe UI', 'Noto Sans TC', Roboto, Ubuntu, 'Helvetica Neue', Helvetica, Arial, 'Source Han Sans TC', sans-serif;
   color: #ffffff; }
 
+.a-modal {
+  color: #10384a !important; }
+
 #loader {
   color: #ffffff;
   font-size: 40px;

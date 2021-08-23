@@ -7,12 +7,15 @@ export default (context) => {
   if (getUser()) {
     context.store.dispatch('online/poll')
   }
+  // 啟用通知計時器
+  context.store.dispatch('notifications/init')
 
   window.onbeforeunload = function () {
     console.log('unloaded')
     // 清除 timer
     context.store.dispatch('timer/clear')
     context.store.dispatch('online/clear')
+    context.store.dispatch('notifications/clear')
     return null
   }
 }

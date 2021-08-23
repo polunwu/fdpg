@@ -43,44 +43,6 @@
     display: none;
   }
 
-  // 提示訊息
-  .msg-wrapper {
-    position: absolute;
-    z-index: 10;
-    top: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 318px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    max-width: 318px;
-    margin: 0 auto;
-
-    .msg {
-      margin: 0 4.5px;
-      padding: 16px 16px;
-      border-radius: 19px;
-      height: 72px;
-      text-align: center;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background: rgba($color: $light-blue, $alpha: 0.9);
-      color: $white;
-      font-size: 14px;
-      line-height: 20px;
-    }
-
-    .msg-half {
-      width: 160px;
-    }
-  }
-
   // ID
   .fdid {
     padding: 6px 19px 8px 6px;
@@ -281,6 +243,7 @@
       left: 0;
       bottom: 16px;
     }
+
     .fdid {
       padding: 5px 19px 12px 29px;
       text-align: left;

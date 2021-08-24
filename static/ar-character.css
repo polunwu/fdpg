@@ -143,13 +143,13 @@ body {
   z-index: 0;
   width: 63vw;
   left: 18.5vw;
-  -webkit-transform: scaleY(1.5);
-  -ms-transform: scaleY(1.5);
-  transform: scaleY(1.5);
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   transform-origin: center;
-  bottom: 9vh;
+  bottom: 20vh;
   -webkit-animation: breathe 2s ease infinite;
   animation: breathe 2s ease infinite; }
   .marker-hint.hide {
@@ -243,7 +243,7 @@ body {
   bottom: 0;
   overflow: scroll;
   text-align: center;
-  background-color: rgba(16, 56, 74, 0.94);
+  background-color: #10384a;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.35s ease, visibility 0.35s ease;
@@ -254,8 +254,8 @@ body {
     visibility: visible; }
   #snap-modal .result-wrapper {
     position: relative;
-    margin: 27px auto 0 auto;
-    width: 86vw;
+    margin: 21px auto 0 auto;
+    width: 94vw;
     border-radius: 16px;
     overflow: hidden; }
     #snap-modal .result-wrapper .result-block {
@@ -265,6 +265,7 @@ body {
       right: 0;
       bottom: 0;
       background-color: #fff;
+      border-radius: 16px;
       -webkit-transition: opacity 0.6s, visibility 0.6s;
       -o-transition: opacity 0.6s, visibility 0.6s;
       transition: opacity 0.6s, visibility 0.6s;
@@ -294,7 +295,7 @@ body {
       bottom: 29px; }
   #snap-modal .result {
     width: 100%;
-    height: 114.67vw;
+    height: 125.33vw;
     background-color: #ffffff;
     border-radius: 16px; }
   #snap-modal .press-hint {
@@ -321,7 +322,7 @@ body {
     height: 427px; }
     #snap-modal .hashtag-section .hashtags {
       padding: 20px 12px;
-      background-color: rgba(16, 56, 74, 0.88);
+      background-color: #0c2936;
       position: relative;
       border-radius: 16px;
       height: 204px; }

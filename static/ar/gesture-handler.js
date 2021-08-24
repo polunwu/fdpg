@@ -1,6 +1,6 @@
 /* global AFRAME, THREE */
 
-AFRAME.registerComponent("gesture-handler", {
+AFRAME.registerComponent('gesture-handler', {
   schema: {
     enabled: { default: true },
     rotationFactor: { default: 5 },
@@ -16,34 +16,38 @@ AFRAME.registerComponent("gesture-handler", {
     this.initialScale = this.el.object3D.scale.clone();
     this.scaleFactor = 1;
 
-    this.el.sceneEl.addEventListener("markerFound", (e) => {
+    this.el.sceneEl.addEventListener('markerFound', (e) => {
       this.isVisible = true;
     });
 
-    this.el.sceneEl.addEventListener("markerLost", (e) => {
+    this.el.sceneEl.addEventListener('markerLost', (e) => {
       this.isVisible = false;
     });
   },
 
   update: function () {
     if (this.data.enabled) {
-      this.el.sceneEl.addEventListener("onefingermove", this.handleRotation);
-      this.el.sceneEl.addEventListener("twofingermove", this.handleScale);
+      this.el.sceneEl.addEventListener('onefingermove', this.handleRotation);
+      this.el.sceneEl.addEventListener('twofingermove', this.handleScale);
     } else {
-      this.el.sceneEl.removeEventListener("onefingermove", this.handleRotation);
-      this.el.sceneEl.removeEventListener("twofingermove", this.handleScale);
+      this.el.sceneEl.removeEventListener('onefingermove', this.handleRotation);
+      this.el.sceneEl.removeEventListener('twofingermove', this.handleScale);
     }
   },
 
   remove: function () {
-    this.el.sceneEl.removeEventListener("onefingermove", this.handleRotation);
-    this.el.sceneEl.removeEventListener("twofingermove", this.handleScale);
+    this.el.sceneEl.removeEventListener('onefingermove', this.handleRotation);
+    this.el.sceneEl.removeEventListener('twofingermove', this.handleScale);
   },
 
   handleRotation: function (event) {
     if (this.isVisible) {
-      this.el.object3D.rotation.y +=
-        event.detail.positionChange.x * this.data.rotationFactor;
+      // 注意！原本為：
+      // this.el.object3D.rotation.y +=
+      // * event.detail.positionChange.x * this.data.rotationFactor;
+      // 因為模型水平放置，手勢 x 方向改為繞 z 軸旋轉
+      this.el.object3D.rotation.z +=
+        -1 * event.detail.positionChange.x * this.data.rotationFactor;
       this.el.object3D.rotation.x +=
         event.detail.positionChange.y * this.data.rotationFactor;
     }

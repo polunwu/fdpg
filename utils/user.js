@@ -12,6 +12,10 @@ export function clearUser() {
 }
 
 export function charAcquired() {
+  if (window.innerWidth > 1024) {
+    // 桌機版直接顯示
+    return true
+  }
   return localStorage.getItem(ACQUIRED_KEY_NAME)
 }
 

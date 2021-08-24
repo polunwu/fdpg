@@ -205,6 +205,7 @@
       .gate-wrapper {
         .gate {
           height: calc(100vh - 555px);
+          min-height: 68px;
         }
       }
     }

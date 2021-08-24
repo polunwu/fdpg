@@ -18,6 +18,9 @@
         src="@/assets/images/icons/scan.svg"
         alt="scan"
       />
+      <NuxtLink :to="`/pedia#${character}`" class="result__pedia">
+        <img src="@/assets/images/icons/pedia-white.svg" alt="pedia" />
+      </NuxtLink>
     </template>
   </div>
 </template>

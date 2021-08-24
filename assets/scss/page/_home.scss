@@ -77,6 +77,13 @@
       top: 98px;
       right: 25px;
     }
+
+    &__pedia {
+      position: absolute;
+      padding: 10px;
+      right: 25px;
+      top: 145px;
+    }
   }
 
   .gates {
@@ -262,6 +269,14 @@
 
       &__again {
         display: none;
+      }
+      &__pedia {
+        img {
+          width: 30px;
+          height: 33px;
+        }
+        top: 130px;
+        right: 30px;
       }
     }
     .gates {

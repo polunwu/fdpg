@@ -24,8 +24,7 @@
           alt="intro_1"
         />
         <p class="describe">
-          如果想要得到專屬自己的活動角色，須依循著以下指示才能夠獲得他！首先，你需要找到「物資包」中的神聖印記
-          ...
+          這是解鎖的色的第 1 步，首先找到玩心盒當中的神聖印記 ...
         </p>
       </swiper-slide>
       <swiper-slide>
@@ -35,8 +34,7 @@
           alt="intro_2"
         />
         <p class="describe">
-          再來你需要將這個印記的資料傳輸至 Fourdesire Playground
-          。你只需要授權你的相機，將相機對準印記，系統就可進行分析 ...
+          接著，授權相機，對準印記，系統就會開始辨識分析...
         </p>
       </swiper-slide>
       <swiper-slide>
@@ -46,9 +44,8 @@
           alt="intro_3"
         />
         <p class="describe">
-          經過幾秒的分析，你將獲得你本次 Fourdesire Playground
-          專屬角色，你同時能夠了解到自己的各項能力及技能，請將分析結果「截圖」下來，分享至
-          instagram
+          分析完成！查看你專屬角色的各項數值和技能，還能將分析結果拍照分享到
+          IG！
         </p>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>

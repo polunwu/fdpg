@@ -272,6 +272,7 @@ body {
       opacity: 1;
       visibility: visible; }
       #snap-modal .result-wrapper .result-block.hide {
+        display: none;
         visibility: hidden;
         opacity: 0; }
     #snap-modal .result-wrapper .result-loader {

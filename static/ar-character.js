@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     document.querySelector('#snap-modal').classList.remove('show');
     setTimeout(() => {
       document.querySelector('#snap-modal .result').src = '';
-      document.querySelector('.result-block').classList.remove('hide');
+      document.querySelector('.result-block').classList.add('hide');
     }, 400);
   });
 

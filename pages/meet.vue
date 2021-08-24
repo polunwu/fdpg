@@ -5,6 +5,11 @@
       src="@/assets/images/meet/top-img@2x.png"
       alt="top img"
     />
+    <img
+      class="pc-top-img"
+      src="@/assets/images/meet/pc/top-img@2x.png"
+      alt="top img"
+    />
     <h2 class="title">Meet 大廳指南</h2>
     <div class="block-wrapper">
       <div class="block">

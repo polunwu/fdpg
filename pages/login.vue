@@ -775,7 +775,7 @@
     <img
       ref="playerLoader"
       class="player-loader"
-      src="~/assets/images/login/player_loader.svg"
+      src="~/assets/images/login/player_loader.png"
       alt="player_loader"
     />
     <div class="login">

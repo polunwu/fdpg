@@ -123,7 +123,7 @@
 
     .gate {
       width: 100%;
-      height: 29.7vw;
+      height: calc(100vh - 610px);
       max-height: 116px;
       border-radius: 18px;
       position: relative;
@@ -192,8 +192,8 @@
     }
   }
 
-  // 高度小於 697px
-  @media screen and (max-height: 697px) {
+  // 高度小於 680px
+  @media screen and (max-height: 680px) {
     padding-top: 90px;
 
     // 上線人數
@@ -204,7 +204,7 @@
     .gates {
       .gate-wrapper {
         .gate {
-          height: 11.5vh !important;
+          height: calc(100vh - 555px);
         }
       }
     }
@@ -265,7 +265,10 @@
     }
     .result {
       max-width: 493px;
-      transform: translateX(-116px); //左移
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 116px);
+      transform: translateX(-50%) translateY(-50%);
 
       &__again {
         display: none;
@@ -282,8 +285,9 @@
     .gates {
       flex-direction: column-reverse;
       bottom: auto;
-      top: 172px;
-      transform: translateX(127px);
+      top: 50%;
+      left: calc(50% + 321px);
+      transform: translateX(-50%) translateY(-50%);
 
       .gate-wrapper:first-child {
         display: none;

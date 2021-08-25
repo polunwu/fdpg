@@ -1,5 +1,15 @@
 <template>
   <div id="page-pedia">
+    <img
+      class="bg"
+      src="@/assets/images/home/space_grid_bg.svg"
+      alt="space_grid_bg"
+    />
+    <img
+      class="pc-bg"
+      src="@/assets/images/pedia/pc/bg.png"
+      alt="space_grid_bg"
+    />
     <img class="top-img" src="@/assets/images/pedia/top@2x.png" alt="top" />
     <img
       class="pc-top-img"

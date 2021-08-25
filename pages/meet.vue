@@ -19,7 +19,7 @@
           alt="block_1"
         />
         <p class="block__text">
-          使用電腦/筆電直接點擊【進入 Meet 大廳】
+          1. 使用電腦/筆電直接點擊【進入 Meet 大廳】
           <br />
           <span class="light"
             >可使用 Chrome, Edge, Safari, Firefox 瀏覽器，或安裝 Google Meet
@@ -33,7 +33,7 @@
           src="@/assets/images/meet/block_2@2x.png"
           alt="block_2"
         />
-        <p class="block__text">請允許麥克風與相機權限</p>
+        <p class="block__text">2. 請允許麥克風與相機權限</p>
       </div>
       <div class="block">
         <img
@@ -42,7 +42,7 @@
           alt="block_3"
         />
         <p class="block__text">
-          可使用下方工具列開關鏡頭<br />
+          3. 可使用下方工具列開關鏡頭<br />
           <span class="light">Google Meet 會議進行中請保持麥克風關閉喔！</span>
         </p>
       </div>
@@ -50,7 +50,7 @@
     <div class="rights">© Fourdesire. All Rights Reserved.</div>
 
     <a class="link" @click="toMeet">
-      進入 Meet 大廳
+      4. 進入 Meet 大廳
       <div class="lock" v-show="!meetIsUp">
         <img class="icon" src="@/assets/images/icons/lock.svg" />
       </div>

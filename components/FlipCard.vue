@@ -1,5 +1,5 @@
 <template>
-  <div class="card" :id="`c${index}`">
+  <div class="card" :id="`c${index}`" :class="{ show: isShow }">
     <img
       class="card-img"
       :class="{ show: isShow }"

@@ -43,7 +43,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 99;
+    z-index: 99; // 小於 nav
 
     // perspective: 500px;
 
@@ -53,6 +53,10 @@
           rotateZ(10deg) translateZ(-100px) translateX(-30px) translateY(120px); // Y 位移為 /pedia#c1 自動定位用
       }
       // translateZ 退後 100px 避免在透視上跟 nav 的面相交
+    }
+
+    &.show {
+      z-index: 102; // 大於 nav
     }
 
     .card-img {

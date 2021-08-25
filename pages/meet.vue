@@ -71,7 +71,7 @@ export default {
       // 跳轉 gather
       if (this.meetIsUp) {
         setTimeout(() => {
-          window.open('https://www.google.com/', '_blank')
+          window.open('https://meet.google.com/fjg-huao-hzo', '_blank')
         }, 500)
       }
     },

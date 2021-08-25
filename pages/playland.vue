@@ -116,7 +116,10 @@ export default {
       // 跳轉 gather
       if (this.gatherIsUp) {
         setTimeout(() => {
-          window.open('https://www.google.com/', '_blank')
+          window.open(
+            'https://gather.town/app/GmGErGjmbATw1eub/playland',
+            '_blank'
+          )
         }, 500)
       }
     },

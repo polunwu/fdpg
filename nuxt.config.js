@@ -6,7 +6,7 @@ export default {
     port: 8000, // default: 3000
   },
   router: {
-    base: '/fdpg/',
+    // base: '/fdpg/', // gh-pages 需要
     middleware: 'auth',
   },
 

@@ -87,8 +87,7 @@ export default {
       if (this.swiper.isEnd) {
         console.log('end')
         // navigate to ar static page
-        window.location.href =
-          window.location.origin + '/fdpg/ar-character.html'
+        window.location.href = window.location.origin + '/ar-character.html'
       }
     },
   },

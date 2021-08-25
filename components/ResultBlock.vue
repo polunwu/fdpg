@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     playAgain() {
-      window.location.href = window.location.origin + '/fdpg/ar-character.html'
+      window.location.href = window.location.origin + '/ar-character.html'
     },
   },
 }

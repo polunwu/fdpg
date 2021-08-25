@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function (evt) {
   // 4. 返回首頁
   document.querySelectorAll('.js-back-home').forEach(function (el) {
     el.addEventListener('click', function () {
-      window.location.href = window.location.origin + '/fdpg/'
+      window.location.href = window.location.origin
     })
   })
 

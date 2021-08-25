@@ -102,13 +102,21 @@
     border-radius: 22px 0 0 22px;
     right: 0;
   }
-  // 改寫 Swiper END
-
   // silde 內容圖片
   .slide-img {
     width: 83vw;
     max-width: 348px;
+    transform: scale(0.8);
+    transform-origin: center;
+    transition: transform 0.8s ease;
   }
+  // active 狀態
+  .swiper-slide-active {
+    .slide-img {
+      transform: scale(1);
+    }
+  }
+  // 改寫 Swiper END
 
   // 高度小於 697px
   @media screen and (max-height: 697px) {

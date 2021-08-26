@@ -792,7 +792,7 @@
             v-model="fdid"
             class="login__input"
             type="text"
-            placeholder="輸入 Fourdeisre ID"
+            placeholder="輸入 Fourdesire ID"
           />
           <button
             v-if="fdid"

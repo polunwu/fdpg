@@ -875,6 +875,7 @@ export default {
           this.poll()
         }, 3000)
       } catch (error) {
+        this.$honeybadger.notify(error)
         this.verifying = false
         this.error = '很抱歉，您並非入選玩家'
         this.disableSubmit = false

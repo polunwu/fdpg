@@ -1,6 +1,6 @@
 import { getUser } from '@/utils/user'
 
-const requestOnlineStatus = async function ($axios, commit) {
+const requestOnlineStatus = async function ($axios, commit, $honeybadger) {
   try {
     const { online_count } = await $axios.$post(
       'https://j9dh3ne194.execute-api.ap-northeast-2.amazonaws.com/fdpg2021/online_status',
@@ -12,6 +12,7 @@ const requestOnlineStatus = async function ($axios, commit) {
     console.log(online_count)
     commit('setCount', { count: online_count })
   } catch (error) {
+    $honeybadger.notify(error)
     console.log(error)
   }
 }
@@ -36,9 +37,9 @@ export const mutations = {
 export const actions = {
   poll({ commit }) {
     commit('clearTimer')
-    requestOnlineStatus(this.$axios, commit)
+    requestOnlineStatus(this.$axios, commit, this._vm.$honeybadger)
     const timerID = setInterval(() => {
-      requestOnlineStatus(this.$axios, commit)
+      requestOnlineStatus(this.$axios, commit, this._vm.$honeybadger)
     }, 5000)
     commit('setTimerID', { timerID: timerID })
 

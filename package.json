@@ -11,6 +11,7 @@
     "deploy:test": "push-dir --dir=dist --branch=gh-pages --remote=test --cleanup"
   },
   "dependencies": {
+    "@honeybadger-io/vue": "^1.0.3",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/style-resources": "^1.2.0",
     "core-js": "^3.15.1",

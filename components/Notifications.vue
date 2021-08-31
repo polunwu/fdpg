@@ -62,7 +62,7 @@
       <a
         v-if="phase === 5"
         class="msg-download"
-        href="https://www.google.com.tw/"
+        href="https://drive.google.com/drive/folders/1ocLF1xFzZ1biye6JH8pHmiw0U-wJgE83"
         target="_blank"
       >
         <img class="gift" src="@/assets/images/icons/gift.svg" alt="gif" />

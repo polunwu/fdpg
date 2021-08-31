@@ -147,10 +147,16 @@
       display: block;
       position: fixed;
       right: 86px;
-      bottom: 113px;
+      bottom: 106px;
       width: 184px;
+      height: 178px;
+      overflow: hidden;
       z-index: 40;
       transition: bottom 0.2s ease;
+
+      &__img {
+        width: 100%;
+      }
     }
   }
 }

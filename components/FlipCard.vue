@@ -3,7 +3,7 @@
     <img
       class="card-img"
       :class="{ show: isShow }"
-      :src="require(`@/assets/images/pedia/card/${index}.png`)"
+      :src="require(`@/assets/images/char/card/c${index}.png`)"
       @click="toggle"
       alt="card-img"
     />

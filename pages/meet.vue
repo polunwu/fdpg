@@ -50,19 +50,32 @@
     <div class="rights">© Fourdesire. All Rights Reserved.</div>
 
     <a class="link" @click="toMeet">
-      4. 進入 Meet 大廳
+      進入 Meet 大廳
       <div class="lock" v-show="!meetIsUp">
         <img class="icon" src="@/assets/images/icons/lock.svg" />
       </div>
     </a>
-    <img class="pc-card" src="@/assets/images/meet/pc/card@2x.png" alt="card" />
+    <div class="pc-card">
+      <img
+        class="pc-card__img"
+        :src="require(`@/assets/images/char/card/${character}.png`)"
+        alt="card"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import { getUser } from '@/utils/user'
 import { mapGetters } from 'vuex'
 export default {
   layout: 'dashboard',
+  data() {
+    const { character } = getUser()
+    return {
+      character: character || 'c1',
+    }
+  },
   computed: {
     ...mapGetters('timer', ['meetIsUp']),
   },

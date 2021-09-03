@@ -3,6 +3,7 @@ import { calcPhase } from '@/utils/notifications'
 export const state = () => ({
   phase: 0,
   timerID: null,
+  showDownloadLink: false, // 顯示桌布下載連結
 })
 
 export const mutations = {
@@ -14,6 +15,9 @@ export const mutations = {
   },
   clearTimer(state) {
     clearInterval(state.timerID)
+  },
+  enableDownload(state) {
+    state.showDownloadLink = true
   },
 }
 
@@ -29,10 +33,16 @@ export const actions = {
   clear({ commit }) {
     commit('clearTimer')
   },
+  enableDownload({ commit }) {
+    commit('enableDownload')
+  },
 }
 
 export const getters = {
   phase(state) {
     return state.phase
+  },
+  showDownloadLink(state) {
+    return state.showDownloadLink
   },
 }

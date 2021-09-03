@@ -48,19 +48,11 @@
           <NotificationClose @close="handleClose" />
         </div>
       </transition>
-      <transition name="fade" mode="out-in">
-        <div v-if="phase === 5" class="msg">
-          謝謝您今天的參與！歡迎到 Playland 辦公室<br />
-          和我們聊聊。別忘了填寫活動問卷，有小驚喜喔！
-          <NuxtLink to="/questions" class="questions-link">會後問卷</NuxtLink>
-          <NotificationClose @close="handleClose" />
-        </div>
-      </transition>
     </template>
     <!-- 桌布 -->
     <transition name="fade" mode="out-in">
       <a
-        v-if="phase === 5"
+        v-if="showDownloadLink"
         class="msg-download"
         href="https://drive.google.com/drive/folders/1ocLF1xFzZ1biye6JH8pHmiw0U-wJgE83"
         target="_blank"
@@ -83,7 +75,7 @@ export default {
     },
   },
   computed: {
-    ...mapGetters('notifications', ['phase']),
+    ...mapGetters('notifications', ['phase', 'showDownloadLink']),
   },
   watch: {
     phase: {
@@ -95,7 +87,7 @@ export default {
   },
   data() {
     return {
-      // phase: 5,
+      // phase: 4,
       isClosed: false,
     }
   },
